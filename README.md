@@ -1,45 +1,163 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Weekly Shopping List app
 
-Welcome USER_NAME,
+[View the live project here.](https://xm/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+into 
 
-## Gitpod Reminders
+![Preview](/docs/responsive.jpg)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+### Project Goals
 
-A blue button should appear to click: *Make Public*,
+Project goal is to create an online presence with online shop functionality for a small family business producing natural honey and derivated products, as well as made from-zero handmade soaps, shampoos, and cosmetics. 
+The couple makes part of a small ecovillage project, created in the center of the Republic of Moldova 15 years ago inspired by permacultural and sustainable living principles.
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### As a Shopper, I want to:
 
-A blue button should appear to click: *Make Public*,
+	* have access to the shop in one click
+	* view a list of all products and have quick access to purchase them
+	* view individual product details with description, available sizes, and stock information
+	* have a view on my purchase list at any time not to overspend
+	* sort products by available/out of stock
+	* search for a product by name or description
+	* easily selected quantity and amount of selected product when purchasing it
+	* view all the items in my shopping bag with description/qty/size/grand total
+	* easily make changes and adjustments before my purchase/order
+	* easily enter payment information to check out with no unwanted delays
+	* feel my information is secured and be confident to provide required data to make an order/purchase
+	* view confirmation after checkout and receive an email with a confirmation of the order.
 
-Another blue button should appear to click: *Open Browser*.
+#####  As a User, I want to :
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    * have content in my native preffered language (R.Moldova have 2 main spoken languages, Romanian and Russian)
+    * have a clean interface with a familiar layout
+    * Create a personal account and be able to view and change my profile detail
+    * access and change my personal account information
+    * recover a forgotten password to my account
+    * have meaningful messages and confirmation of my interaction with the site as confirmation emails and messages
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+####  As an Admin/Store Owner, I want to :
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+	* have easy access to manage products
+	* add new products
+	* edit and update product description /images and availability
+	* remove products that are no longer needed 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+-   ### Design
+    -   #### Color Scheme
+        -   
+    -   #### Typography
+        -   
+    -   #### Imagery
+        -  
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+*   ### Wireframes
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+    -   Main, shopping list - [View](/docs/main_shopping.jpg)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    -   Items, recipes - [View](/docs/items_recipes.jpg)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    -   Mobile navigation - [View](/docs/mobile_nav.jpg)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    -   Collection structure - [View](/docs/collection.jpg)
 
---------
 
-Happy coding!
+## Features
+
+### Main page
+- 
+
+## Technologies Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+
+### Frameworks, Libraries & Programs Used
+
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+2. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+
+5. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+6. [JQuery](https://en.wikipedia.org/wiki/JQuery)
+    - JavaScript library designed to simplify HTML DOM tree traversal and manipulation, event handling, css animation.
+
+9. [Heroku](https://en.wikipedia.org/wiki/Heroku)
+    - Heroku is a cloud platform as a service (PaaS) supporting several programming languages, including Python used in this project.
+
+
+## Testing
+
+The W3C Markup Validator, W3C CSS Validator and PEP8 Validator were used to validate code in the pages listed below to ensure there were no syntax errors in the project.
+
+-   [W3C Markup Validator](https://validator.w3.org/) 
+        - [Result - Main](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2F)
+        - [Result - Login](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Flogin)
+        - [Result - Register](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Fregister)
+        - [Result - Shared recipe](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Fshare_shopping_list%2Ftest1)
+        - [Result - Feedback](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Ffeedback)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Fstatic%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+-   [PEP8 Validator](http://pep8online.com/) - app.py and utils.py - Pass
+
+### Features Testing
+
+#### Main page
+- 
+
+
+### Further Testing
+
+-   
+
+
+### Known Bugs
+
+
+- 
+
+### Features to implement
+
+- 
+
+## Deployment
+
+### Heroku with Github integration
+
+1. Create a Procfile with the terminal command echo web: python app.py > Procfile.
+2. Create a requirements.txt: pip3 freeze --local > requirements.txt.
+3. Push and commit requirements.txt and Procfile
+4. On the Heroku app page, click on the Deploy, find Deployment method and select GitHub
+5. In search for repository to connect to select desired repo-name and link it to Heroku.
+6. On the Heroku app page, click on Settings -> Reveal Config Vars
+7. Set the Config Vars in the Settings: 
+    - Debug: False; 
+    - IP: 0.0.0.0; 
+    - PORT: 5000;
+    - MONGO_URI: mongodb+srv://username:password@myfirstcluster.kmobf.mongodb.net/weeklyShopping?retryWrites=true&w=majority;
+    - SECRET_KEY: <your_secret_key>.
+8. Navigate back Deploy section, click on the Deploy Branch, you can enable Automatic Deploy, in automatic mode every push to GitHub wil automatically the latest version.
+9. Now app is deployed on Heroku, you can open and view it by clicking on the Open app on top of the page.
+
+
+    
+### Media
+
+-   
+
+
+### Acknowledgements
+
+-   My Mentor for continuous constructive feedback.
+
+
+### Links
+
+- 
