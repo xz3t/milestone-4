@@ -1,4 +1,4 @@
-# Weekly Shopping List app
+#  Name of the app
 
 [View the live project here.](https://xm/)
 
@@ -96,16 +96,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Testing
 
-The W3C Markup Validator, W3C CSS Validator and PEP8 Validator were used to validate code in the pages listed below to ensure there were no syntax errors in the project.
-
--   [W3C Markup Validator](https://validator.w3.org/) 
-        - [Result - Main](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2F)
-        - [Result - Login](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Flogin)
-        - [Result - Register](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Fregister)
-        - [Result - Shared recipe](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Fshare_shopping_list%2Ftest1)
-        - [Result - Feedback](https://validator.w3.org/nu/?doc=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Ffeedback)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fweekly-shopping-app.herokuapp.com%2Fstatic%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
--   [PEP8 Validator](http://pep8online.com/) - app.py and utils.py - Pass
+-
 
 ### Features Testing
 
