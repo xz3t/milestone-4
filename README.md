@@ -29,18 +29,20 @@ The couple makes part of a small ecovillage project, created in the center of th
 	* feel my information is secured and be confident to provide required data to make an order/purchase
 	* view confirmation after checkout and receive an email with a confirmation of the order.
 
-#####  As a User, I want to :
+####  As a User, I want to :
 
-    * have content in my native preffered language (R.Moldova have 2 main spoken languages, Romanian and Russian)
+    * have content in my native preffered language 
+    (R.Moldova have 2 main spoken languages, Romanian and Russian)
     * have a clean interface with a familiar layout
     * Create a personal account and be able to view and change my profile detail
     * access and change my personal account information
     * recover a forgotten password to my account
-    * have meaningful messages and confirmation of my interaction with the site as confirmation emails and messages
+    * have meaningful messages and confirmation of my interaction with the site 
+    as confirmation emails and messages
 
 
 ####  As an Admin/Store Owner, I want to :
-
+    * recieve a copy of order to email
 	* have easy access to manage products
 	* add new products
 	* edit and update product description /images and availability
