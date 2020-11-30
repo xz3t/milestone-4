@@ -42,11 +42,13 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 
 ####  As an Admin/Store Owner, I want to :
-    * recieve a copy of order to email
+    * receive a copy of order to email
 	* have easy access to manage products
 	* add new products
 	* edit and update product description /images and availability
 	* remove products that are no longer needed 
+    * add/edit and update events
+    * add edit and update About section with new articles and links
 
 -   ### Design
     -   #### Color Scheme
@@ -58,14 +60,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 *   ### Wireframes
 
-    -   Main, shopping list - [View](/docs/main_shopping.jpg)
-
-    -   Items, recipes - [View](/docs/items_recipes.jpg)
-
-    -   Mobile navigation - [View](/docs/mobile_nav.jpg)
-
-    -   Collection structure - [View](/docs/collection.jpg)
-
+    -   Wireframes - [View](/docs/wireframes.html)
 
 ## Features
 
