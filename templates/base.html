@@ -32,7 +32,18 @@
     <title>APINI md {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+        <div class="container">
+            <div class="row no-gutters d-flex px-md-0 ">
+                <div class="col-lg-12 d-block">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2 small">Free delivery over 50 Euro</div>
+                        <div class="p-2 small">En | Ro | Ru </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     {% if messages %}
         <div class="message-container"></div>
