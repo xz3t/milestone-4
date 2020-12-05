@@ -10,7 +10,55 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
+/* index style*/
+
+.index-height {
+    min-height: 650px;
+}
+
+/* main page buttons */
+
 .shop-button,
 .event-button {
     background: rgba(255, 255, 255, 0.74);;
 }
+
+/* footer style*/
+
+footer {
+    padding-top: 15px;
+}
+
+.social-icons li {
+    list-style: none;
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+
+.social-icons li a {
+    height: 30px;
+    width: 30px;
+    display: block;
+    float: left;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.social-icons li a i{
+    position: absolute;
+    font-size: 26px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+
