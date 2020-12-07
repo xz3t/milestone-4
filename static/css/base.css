@@ -8,11 +8,13 @@ body {
     height: calc(100vh - 200px);
     color: #555555;
     font-family: 'Roboto Slab', serif;
+    padding-top: 100px;
 }
 
 ul {
   list-style-type: none;
 }
+
 
 /* index style*/
 
@@ -61,4 +63,15 @@ footer {
     color: #000;
 }
 
+/* products section */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
 
