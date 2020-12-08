@@ -13,11 +13,11 @@
         <div class="col-sm-4">
             <ul class="small">
                 <li><a href="{% url 'products' %}"> All products</a></li>
-                <li><a href="">Honey & Mixes</a></li>
-                <li><a href="">Bee Products</a></li>
-                <li><a href="">Cosmetics</a></li>
-                <li><a href="">Events & News</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{% url 'products' %}?category=honey,mixes">Honey & Mixes</a></li>
+                <li><a href="{% url 'products' %}?category=bee_products">Bee Products</a></li>
+                <li><a href="{% url 'products' %}?category=cosmetics">Cosmetics</a></li>
+                <li><a href="#">Events & News</a></li>
+                <li><a href="#">About</a></li>
             </ul>
             <hr class="w-50 mb-1 d-block d-sm-none">
         </div>
