@@ -15,6 +15,14 @@ ul {
   list-style-type: none;
 }
 
+.border-grey {
+    border-bottom: 2px solid #575151;
+}
+
+.my-footer {
+    border-top: 3px solid #575151;
+    padding-top: 20px;
+}
 
 /* index style*/
 
