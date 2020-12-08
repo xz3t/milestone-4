@@ -69,44 +69,7 @@
     {% endblock %}
 
     <footer class="bg-white w-100 mt-auto">
-        <div class="container my-footer">
-            <div class="row text-center">
-                <div class="col-sm-4">
-                    <h4>APINI</h4>
-                    <p class="small">We are small family business producing natural honey and derivated products, as well as made from-zero handmade soaps, shampoos, and cosmetics</p>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-                    <hr class="w-50 mb-1 d-block d-sm-none">
-                </div>
-                <div class="col-sm-4">
-                    <ul class="small">
-                        <li><a href="{% url 'products' %}"> All products</a></li>
-                        <li><a href="">Honey & Mixes</a></li>
-                        <li><a href="">Bee Products</a></li>
-                        <li><a href="">Cosmetics</a></li>
-                        <li><a href="">Events & News</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                    <hr class="w-50 mb-1 d-block d-sm-none">
-                </div>
-                <div class="col-sm-4 text-right">
-                    <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> mun. Chisinau, str Valea Dicescu 47</li>
-                    <li><i class="fas fa-phone"></i> +(373) 67699396</li>
-                    <li><i class="fas fa-envelope"></i> apinimd@gmail.com</li>
-                    </ul>
-                    <hr class="w-50 mb-1 d-block d-sm-none">
-                </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-12">
-                      <p class="small"> Copyright &copy; All rights reserved</p>
-                    </div>
-                </div>
-        </div>
+        {% include 'includes/footer.html' %}
     </footer>
 
     {% block postloadjs %}
