@@ -6,9 +6,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="productDropdown">
                 <a class="dropdown-item" href="{% url 'products' %}">All products</a>
-                <a class="dropdown-item" href="#">Honey & Mixes</a>
-                <a class="dropdown-item" href="#">Bee products</a>
-                <a class="dropdown-item" href="#">Cosmetics</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=honey,mixes">Honey & Mixes</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=bee_products">Bee products</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=cosmetics">Cosmetics</a>
             </div>
         </li>
         <li class="nav-item">
