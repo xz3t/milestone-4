@@ -8,13 +8,18 @@
         <div class="col"></div>
     </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %} 
+{% block content %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="container">
         <div class="row">
             <div class="col text-center mt-3">
-                <h3>Products</h3>
+                <h3>Products {{LANGUAGE_CODE}}</h3>
                 {% for c in current_categories %}
                     <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -75,6 +80,13 @@
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
+                                    {% if LANGUAGE_CODE == 'ro' %}
+                                        <p class="mb-0">{{ product.description_ro}}</p>
+                                    {% elif LANGUAGE_CODE == 'ru' %}
+                                        <p class="mb-0">{{ product.description_ru}}</p>
+                                    {% else %}
+                                        <p class="mb-0">{{ product.description_en}}</p>
+                                    {% endif %}
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
