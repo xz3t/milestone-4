@@ -1,21 +1,23 @@
+{% load i18n %}
+
 <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Shop
+              {% trans "Shop" %}
             </a>
             <div class="dropdown-menu" aria-labelledby="productDropdown">
-                <a class="dropdown-item" href="{% url 'products' %}">All products</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=honey,mixes">Honey & Mixes</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=bee_products">Bee products</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=cosmetics">Cosmetics</a>
+                <a class="dropdown-item" href="{% url 'products' %}">{% trans "All products" %}</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=honey,mixes">{% trans "Honey & Mixes" %}</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=bee_products">{% trans "Bee products" %}</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=cosmetics">{% trans "Cosmetics" %}</a>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Events</a>
+            <a class="nav-link" href="#">{% trans "Events & News" %}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="#">About</a>
+            <a class="nav-link " href="#">{% trans "About" %}</a>
         </li>
     </ul>
     <ul class="navbar-nav ">
@@ -25,11 +27,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a> {% endif %}
+                <a href="{% url 'account_logout' %}" class="dropdown-item">{% trans "Product Management" %}</a> {% endif %}
                 <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a> {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a> {% endif %}
+                <a href="{% url 'account_logout' %}" class="dropdown-item">{% trans "Logout" %}</a> {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">{% trans "Register" %}</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">{% trans "Login" %}</a> {% endif %}
             </div>
         </li>
         <li class="nav-item">
