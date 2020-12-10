@@ -79,12 +79,14 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
                                     {% if LANGUAGE_CODE == 'ro' %}
+                                        <p class="mb-0">{{ product.name_ro }}</p>
                                         <p class="mb-0">{{ product.description_ro}}</p>
                                     {% elif LANGUAGE_CODE == 'ru' %}
+                                        <p class="mb-0">{{ product.name_ru }}</p>
                                         <p class="mb-0">{{ product.description_ru}}</p>
                                     {% else %}
+                                        <p class="mb-0">{{ product.name }}</p>
                                         <p class="mb-0">{{ product.description}}</p>
                                     {% endif %}
                                 </div>
