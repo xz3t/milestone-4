@@ -83,6 +83,17 @@ footer {
 	z-index: -1;
 }
 
+.card-padding {
+    margin-bottom: 20px;
+}
+
+.card-img-products {
+    height: 19em;
+    max-height: 20em ;
+    -o-object-fit: fill;
+    object-fit: fill;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
