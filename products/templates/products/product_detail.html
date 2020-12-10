@@ -29,7 +29,14 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
+                  {% get_current_language as LANGUAGE_CODE %}
+                     {% if LANGUAGE_CODE == 'ro' %}
+                        <p class="mb-0">{{ product.name_ro }}</p>
+                    {% elif LANGUAGE_CODE == 'ru' %}
+                        <p class="mb-0">{{ product.name_ru }}</p>
+                    {% else %}
+                        <p class="mb-0">{{ product.name }}</p>
+                    {% endif %}
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                         {% if product.category %}
                         <p class="small mt-1 mb-0">
@@ -41,7 +48,14 @@
                         {% if product.available %}
                         <small class="text-muted"> Available</small> {% else %}
                         <small class="text-muted">Not in stock</small> {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
+
+                    {% if LANGUAGE_CODE == 'ro' %}
+                        <p class="mb-0">{{ product.description_ro}}</p>
+                    {% elif LANGUAGE_CODE == 'ru' %}
+                        <p class="mb-0">{{ product.description_ru}}</p>
+                    {% else %}
+                        <p class="mb-0">{{ product.description}}</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
