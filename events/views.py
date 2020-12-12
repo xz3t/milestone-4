@@ -6,7 +6,7 @@ from .models import Event
 def events(request):
     """ A view to show all events """
 
-    event = Event.objects.all()
+    event = Event.objects.all().order_by('-date')
 
     context = {
         'event': event,
