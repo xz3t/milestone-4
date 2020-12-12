@@ -15,14 +15,14 @@
         <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h4>Events & News</h4>
+                <h3 class="text-center">Events & News</h3>
                 <ul class="timeline">
                      {% for eve in event %}
                     <li>
-                        <img class="img-fluid" src="{{ event.image.url }}" alt="{{ event.name }}">
-                        <a href="#">{{ eve.date }}</a>
+                        <h5><a href="#">{{ eve.date }}</a></h5>
                         <a target="_blank" href="">{{ eve.name }}</a>
                         <p> {{ eve.description }} </p>
+                        <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
                     </li>
                     {% endfor %}
                 </ul>
