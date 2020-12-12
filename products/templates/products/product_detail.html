@@ -85,7 +85,7 @@
                                     <h5 class="text-left">{{ review.user.username }}</h5>
                                     {% if request.user == review.user %}
                                     <a href="{% url 'edit_review' product.pk review.pk %}">Edit</a>
-                                    <a href="">Delete</a>
+                                    <a href="{% url 'delete_review' product.pk review.pk %}">Delete</a>
                                     {% endif %}
 
                                 </div>

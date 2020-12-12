@@ -121,3 +121,16 @@ def edit_review(request, product_id, review_id):
                 return render(request, 'products/editreview.html', {"form": form})
         else:
             return redirect('product_detail', product_id)
+
+
+def delete_review(request, product_id, review_id):
+        """A view to delete product review"""
+
+        product = get_object_or_404(Product, pk=product_id)
+        review = get_object_or_404(Review, product=product, pk=review_id)
+
+        if request.user == review.user:
+            review.delete()
+            messages.success(request, 'Review delete successfully')
+
+        return redirect('product_detail', product_id)
