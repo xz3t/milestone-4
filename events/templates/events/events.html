@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4>Events & News</h4>
+                <ul class="timeline">
+                     {% for eve in event %}
+                    <li>
+                        <img class="img-fluid" src="{{ event.image.url }}" alt="{{ event.name }}">
+                        <a href="#">{{ eve.date }}</a>
+                        <a target="_blank" href="">{{ eve.name }}</a>
+                        <p> {{ eve.description }} </p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
