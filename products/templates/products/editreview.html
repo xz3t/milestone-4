@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-center">Edit Review</h3>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form  }}
+                <input type="submit" value="Save Changes" class="btn btn-danger">
+            </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
