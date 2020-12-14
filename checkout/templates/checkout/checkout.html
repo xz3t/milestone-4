@@ -102,6 +102,15 @@
 							{% endif %}
 						</div>
                     </fieldset>
+                    <div class="order_option text-center">
+                        <button class="btn rounded-0">
+                            <span class="text-uppercase">{% trans 'Pay on delivery' %}</span>
+                        </button>
+                        <button id="toggle" class="btn rounded-0">
+                            <span class="text-uppercase">{% trans 'Pay by card' %}</span>
+                        </button>
+                    </div>
+                    <div class="payment">
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">{% trans 'Payment' %}</legend>
                         <!-- A Stripe card element will go here -->
@@ -110,7 +119,7 @@
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
-
+                    </div>
                     <div class="submit-button text-right mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
 							<span class="icon">
@@ -135,4 +144,17 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+            $("#toggle").click(function(){
+            $(".payment").toggle();
+        });
+    }); 
+</script>
+
 {% endblock %}
