@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
+{% load i18n %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -16,7 +17,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4">{% trans 'Shopping Bag' %}</h2>
                 <hr>
             </div>
         </div>
@@ -28,11 +29,11 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col">Product Info</th>
+                                    <th scope="col">{% trans 'Product Info' %}</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">{% trans 'Price' %}</th>
+                                    <th scope="col">{% trans 'Qty' %}</th>
+                                    <th scope="col">{% trans 'Subtotal' %}</th>
                                 </tr>
                             </thead>
 
@@ -75,8 +76,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                        <a class="update-link text-info"><small>{% trans 'Update' %}</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>{% trans 'Remove' %}</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">MDL {{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -85,12 +86,12 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: MDL {{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: MDL {{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: MDL {{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6><strong>{% trans 'Bag Total: MDL {{ total|floatformat:2 }}</strong></h6>
+                                    <h6>{% trans 'Delivery:' %} MDL {{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>{% trans 'Grand Total:' %} MDL {{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>MDL {{ free_delivery_delta }}</strong> more!
+                                            {% trans 'You could get free delivery by spending just ' %}<strong>MDL {{ free_delivery_delta }}</strong>{% trans ' more!' %}
                                         </p>
                                     {% endif %}
                                 </td>
@@ -101,10 +102,10 @@
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span class="text-uppercase">{% trans 'Keep Shopping' %}</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
+                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                        <span class="text-uppercase">{% trans 'Secure Checkout' %}</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
                                         </span>
