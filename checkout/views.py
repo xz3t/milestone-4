@@ -38,13 +38,11 @@ def checkout(request):
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
-                        quantity=item_data,
-                        )
-                        order_line_item.save()
+                        quantity=item_data,)
+                    order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
+                    messages.error(request,
                         _("One of the products in your bag wasn't found in our database.")
-                        _("Please call us for assistance!"))
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
