@@ -119,26 +119,26 @@
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     </fieldset>
+                        <p class="small text-danger my-0 text-right">
+						<span class="icon">
+							<i class="fas fa-exclamation-circle"></i>
+						</span>
+						<span>{% trans 'Your card will be charged' %} <strong>MDL {{ grand_total|floatformat:2 }}</strong></span>	
+                        </p>
+                        <p class="text-center">
+                        <button id="submit-button" class="btn">
+							<span class="font-weight-bold">{% trans 'Complete Order' %}</span>
+								<i class="fas fa-lock"></i>
+						</button></p>
                     </div>
-                    <div class="submit-button text-right mt-5 mb-2">                    
+                    <div class="submit-button text-left mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">{% trans 'Adjust Bag' %}</span>
 						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">{% trans 'Complete Order' %}</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
-						</button>
-						<p class="small text-danger my-0">
-							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
-							</span>
-							<span>{% trans 'Your card will be charged' %} <strong>MDL {{ grand_total|floatformat:2 }}</strong></span>
-						</p>
+	
 					</div>
                 </form>
             </div>
@@ -148,13 +148,16 @@
 
 {% block postloadjs %}
 {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-            $("#toggle").click(function(){
-            $(".payment").toggle();
-        });
-    }); 
-</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                $("#toggle").click(function(){
+                $(".payment").toggle();
+            });
+        }); 
+    </script>
 
 {% endblock %}
