@@ -166,6 +166,8 @@ LANGUAGES = (
     ('ru', _('Russian')),
 )
 
+COUNTRIES_ONLY = ['MD', 'IE']
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 

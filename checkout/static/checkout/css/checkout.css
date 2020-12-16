@@ -2,6 +2,18 @@
     display: none;
 }
 
+/* country select form to align to rest of project */
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* stripe section */
 .StripeElement,
 .stripe-style-input {
