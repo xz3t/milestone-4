@@ -1,4 +1,5 @@
-.payment {
+.stripe-pay,
+.order-pay-delivery {
     display: none;
 }
 
