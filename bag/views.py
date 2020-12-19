@@ -3,13 +3,20 @@ from django.shortcuts import (
 from django.contrib import messages
 
 from products.models import Product
+from coupons.forms import CouponApplyForm
 # Create your views here.
 
 
 def view_bag(request):
     """ A view that renders the bag contents page """
 
-    return render(request, 'bag/bag.html')
+    coupon_apply_form = CouponApplyForm()
+
+    context = {
+            'coupon_apply_form': coupon_apply_form,
+        }
+
+    return render(request, 'bag/bag.html', context)
 
 
 def add_to_bag(request, item_id):

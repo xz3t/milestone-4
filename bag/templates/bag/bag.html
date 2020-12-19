@@ -92,6 +92,7 @@
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>{% trans 'Bag Total:' %} MDL {{ total|floatformat:2 }}</strong></h6>
                                     <h6>{% trans 'Delivery:' %} MDL {{ delivery|floatformat:2 }}</h6>
+                                    <h6>{% trans 'Discount:' %} MDL {{ discount|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>{% trans 'Grand Total:' %} MDL {{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
@@ -102,6 +103,12 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
+                                        {% trans "Apply a coupon" %}:
+                                    <form action="{% url "apply" %}" method="post">
+                                        {{ coupon_apply_form | crispy }}
+                                        <input type="submit" value="{% trans "Apply" %}">
+                                        {% csrf_token %}
+                                    </form>
                                     <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>

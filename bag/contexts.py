@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from coupons.models import Coupon
 
 def bag_contents(request):
 
@@ -9,6 +10,7 @@ def bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
+
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
@@ -27,13 +29,21 @@ def bag_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
-    grand_total = delivery + total
+    if request.session.get('coupon_id') is not None:
+        coupon_id = request.session.get('coupon_id', {})
+        coupon = get_object_or_404(Coupon, id=coupon_id)
+        discount = (coupon.discount / Decimal('100')) * total
+    else:
+        discount = 0
+
+    grand_total = delivery + total - discount
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
+        'discount': discount,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
