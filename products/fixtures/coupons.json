@@ -1,0 +1,1 @@
+[{"model": "coupons.coupon", "pk": 1, "fields": {"code": "CODE10", "valid_from": "2020-12-19T12:00:00Z", "valid_to": "2021-02-28T12:00:00Z", "discount": 10, "active": true}}]

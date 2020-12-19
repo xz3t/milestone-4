@@ -1,18 +1,1 @@
-[
-  {
-    "pk": 1,
-    "model": "products.product",
-    "fields": {
-      "sku": "pp5001340155",
-      "name": "Honey 1",
-      "description_en": "Honey 1 description en",
-      "description_ro": "Honey 1 description ro",
-      "description_ru": "Honey 1 description ru",
-      "price": 53.99,
-      "category": 1,
-      "available": "True",
-      "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-      "image": "honey_1.jpg"
-    }
-  }
-]
+[{"model": "products.category", "pk": 1, "fields": {"name": "honey", "friendly_name": "Honey"}}, {"model": "products.category", "pk": 2, "fields": {"name": "soap", "friendly_name": "Soap"}}, {"model": "products.category", "pk": 3, "fields": {"name": "cosmetics", "friendly_name": "Cosmetics"}}, {"model": "products.product", "pk": 1, "fields": {"category": 1, "sku": "pp5001340155", "name": "Honey 1", "name_ro": "Honey 1 romanian", "name_ru": "Honey 1 russian", "description": "Honey 1 description en", "description_ro": "Honey 1 description ro", "description_ru": "Honey 1 description russian", "price": "99.99", "available": true, "back_stock": null, "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp", "image": "honey_1.jpg"}}, {"model": "products.product", "pk": 2, "fields": {"category": 2, "sku": "SKU2", "name": "Soap test1", "name_ro": "Soap test1 romanian", "name_ru": "Soap test1 russian", "description": "English description1", "description_ro": "Romana 1", "description_ru": "Russian 1", "price": "100.00", "available": true, "back_stock": null, "image_url": null, "image": "IMG_20200126_220522.jpg"}}, {"model": "products.product", "pk": 3, "fields": {"category": 3, "sku": "SKU3", "name": "Soap 2", "name_ro": "Soap 2 romanian", "name_ru": "Soap 2 russian", "description": "enlgish 222222222222222222", "description_ro": "romanian 222222222222222", "description_ru": "russian   2222222222222222222222", "price": "44.00", "available": true, "back_stock": null, "image_url": null, "image": "IMG_20200128_211458_1.jpg"}}, {"model": "products.product", "pk": 4, "fields": {"category": 1, "sku": "SKu4", "name": "Honey 2", "name_ro": "Honey 2 romanian", "name_ru": "Honey 2 russian", "description": "en Honey 2", "description_ro": "ro Honey 2", "description_ru": "eu Honey 2", "price": "346.29", "available": true, "back_stock": null, "image_url": null, "image": "IMG_20201208_135830.jpg"}}, {"model": "products.product", "pk": 5, "fields": {"category": 2, "sku": "SKU6", "name": "Soap 33", "name_ro": "Soap 33 romanian", "name_ru": "Soap 33 russian", "description": "en Soap 33", "description_ro": "ro Soap 33", "description_ru": "ru Soap 33", "price": "333.00", "available": false, "back_stock": null, "image_url": null, "image": "IMG_20200126_220912.jpg"}}, {"model": "products.product", "pk": 10, "fields": {"category": 2, "sku": null, "name": "testtt", "name_ro": "testtt", "name_ru": "testtt", "description": "testtt", "description_ro": "testtt", "description_ru": "testtt", "price": "3333.00", "available": true, "back_stock": null, "image_url": null, "image": ""}}, {"model": "products.review", "pk": 1, "fields": {"product": 3, "user": 1, "comment": "first review testing"}}, {"model": "products.review", "pk": 2, "fields": {"product": 1, "user": 1, "comment": "1st review with a change"}}, {"model": "products.review", "pk": 4, "fields": {"product": 2, "user": 1, "comment": "edite review check"}}, {"model": "products.review", "pk": 5, "fields": {"product": 1, "user": 1, "comment": "2nd review tesing"}}]
