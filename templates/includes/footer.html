@@ -4,7 +4,7 @@
     <div class="row text-center">
         <div class="col-sm-4">
             <h4>APINI</h4>
-            <p class="small">We are small family business producing natural honey and derivated products, as well as made from-zero handmade soaps, shampoos, and cosmetics</p>
+            <p class="small">{% trans 'We are small family business producing natural honey and derivated products, as well as made from-zero handmade soaps, shampoos, and cosmetics' %}</p>
             <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -14,12 +14,13 @@
         </div>
         <div class="col-sm-4">
             <ul class="small">
-                <li><a href="{% url 'products' %}"> All products</a></li>
-                <li><a href="{% url 'products' %}?category=honey,mixes">Honey & Mixes</a></li>
-                <li><a href="{% url 'products' %}?category=bee_products">Bee Products</a></li>
-                <li><a href="{% url 'products' %}?category=cosmetics">Cosmetics</a></li>
-                <li><a href="{% url 'events' %}">Events & News</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="{% url 'products' %}">{% trans 'All products' %}</a></li>
+                <li><a href="{% url 'products' %}?category=honey,mixes">{% trans 'Honey & Mixes' %}</a></li>
+                <li><a href="{% url 'products' %}?category=bee_products">{% trans 'Bee Product' %}s</a></li>
+                <li><a href="{% url 'products' %}?category=cosmetics">{% trans 'Cosmetics' %}</a></li>
+                <li><a href="{% url 'events' %}">{% trans 'Events & News' %}</a></li>
+                <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
+                <li><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
             </ul>
             <hr class="w-50 mb-1 d-block d-sm-none">
         </div>
