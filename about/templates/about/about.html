@@ -15,8 +15,19 @@
         <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">{% trans 'About & Contact' %}</h3>
+                <h3 class="text-center">{% trans 'About' %}</h3>
+                <p>our statment is to deliver bla bla bla</p>
 
+                <h3 class="text-center">{% trans 'About us in press' %}</h3>
+                  {% for x in about %}
+                    <li>
+                        <h5>{{ x.name }}</h5>
+                        <p>{{ x.description }}</p>
+                        <p> {{ eve.description }} </p>
+                        <img class="img-fluid" src="{{ x.image.url }}" alt="{{ eve.name }}">
+                        <p><a href="{{ x.url }}"> url to article</a></p>
+                    </li>
+                    {% endfor %}
             </div>
         </div>
     </div>

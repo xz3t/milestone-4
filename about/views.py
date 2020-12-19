@@ -6,7 +6,7 @@ from .models import About
 def about(request):
     """ A view to show all events """
 
-    event = About.objects.all()
+    about = About.objects.all()
 
     context = {
         'about': about,
