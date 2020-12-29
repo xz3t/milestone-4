@@ -1,10 +1,10 @@
 {% load i18n %}
 
 <div class="container my-footer">
-    <div class="row text-center">
+    <div class="row ">
         <div class="col-sm-4">
             <h4>APINI</h4>
-            <p class="small">{% trans 'We are small family business producing natural honey and derivated products, as well as made from-zero handmade soaps, shampoos, and cosmetics' %}</p>
+            <p class="small my-align">{% trans 'We are small family business producing natural honey and derivated products, as well as made from-zero handmade soaps, shampoos, and cosmetics' %}</p>
             <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -12,8 +12,8 @@
             </ul>
             <hr class="w-50 mb-1 d-block d-sm-none">
         </div>
-        <div class="col-sm-4">
-            <ul class="small">
+        <div class="col-sm-4 text-md-center">
+            <ul class="small links">
                 <li><a href="{% url 'products' %}">{% trans 'All products' %}</a></li>
                 <li><a href="{% url 'products' %}?category=honey,mixes">{% trans 'Honey & Mixes' %}</a></li>
                 <li><a href="{% url 'products' %}?category=bee_products">{% trans 'Bee Product' %}s</a></li>
@@ -24,11 +24,14 @@
             </ul>
             <hr class="w-50 mb-1 d-block d-sm-none">
         </div>
-        <div class="col-sm-4 text-right">
-            <ul>
+        <div class="col-sm-4 text-md-right">
+            <ul class="links">
                 <li><i class="fas fa-map-marker-alt"></i> mun. Chisinau, str Valea Dicescu 47</li>
                 <li><i class="fas fa-phone"></i> +(373) 67699396</li>
                 <li><i class="fas fa-envelope"></i> apinimd@gmail.com</li>
+                <li><a href="https://wa.me/37367699396" target="_blank"><i class="fab fa-whatsapp"></i> 37367699396</a></li>
+
+
             </ul>
             <hr class="w-50 mb-1 d-block d-sm-none">
         </div>

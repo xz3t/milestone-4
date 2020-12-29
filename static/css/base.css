@@ -13,15 +13,11 @@ body {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .border-grey {
     border-bottom: 2px solid rgba(114, 110, 110, 0.3);
-}
-
-.my-footer {
-    border-top: 2px solid rgba(114, 110, 110, 0.3);
-    padding-top: 20px;
 }
 
 /* index style*/
@@ -38,6 +34,25 @@ ul {
 }
 
 /* footer style*/
+
+.my-align {
+   display:inline-block;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #555;
+}
+
+.links li a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.my-footer {
+    border-top: 2px solid rgba(114, 110, 110, 0.3);
+    padding-top: 20px;
+}
 
 footer {
     padding-top: 15px;
@@ -58,7 +73,6 @@ footer {
     border-radius: 50%;
     position: relative;
 }
-
 
 .social-icons li a i{
     position: absolute;
