@@ -16,14 +16,14 @@ ul {
   padding: 0;
 }
 
-.border-grey {
-    border-bottom: 2px solid rgba(114, 110, 110, 0.3);
+.my-header {
+    border-bottom: 1px solid rgba(114, 110, 110, 0.3);
 }
 
 /* index style*/
 
 .index-height {
-    min-height: 650px;
+    min-height: 80vh;
 }
 
 /* main page buttons */
@@ -292,4 +292,32 @@ ul.timeline>li:before {
 
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 425px) {
+    .delivery-message {
+        
+    }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
