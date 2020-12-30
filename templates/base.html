@@ -65,7 +65,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
         <div class="container">
-            <a class="navbar-brand" href="#">APINI </a>
+            <a class="navbar-brand" href="{% url 'home' %}">APINI </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -103,12 +103,12 @@
     </footer>
 
     {% block postloadjs %}
-    <!-- Bootsrap -->
+    <!-- bootsrap -->
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
 
-    <!-- https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up -->
+    <!-- hide delivery header on scroll down -> https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up -->
     <script>
     var mywindow = $(window);
     var mypos = mywindow.scrollTop();
