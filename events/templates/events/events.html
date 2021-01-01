@@ -13,10 +13,12 @@
 
 {% block content %}
     <div class="overlay"></div>
-        <div class="container mt-5 mb-5">
+        <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">{% trans 'Event & News' %}</h3>
+                <hr>
+                <h2 class="mb-4">{% trans 'Event & News' %}</h2>
+                <hr>
                 <ul class="timeline">
                      {% for eve in event %}
                     <li>

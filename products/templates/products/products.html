@@ -19,8 +19,10 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col text-center mt-3">
-                <h3>Products</h3>
+            <div class="col">
+                <hr>
+                <h2 class="mb-4">{% trans 'Products' %}</h2>
+                <hr>
                 {% for c in current_categories %}
                     <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
