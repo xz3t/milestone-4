@@ -2,7 +2,7 @@
 {% load static %}
 {% load bag_tools %}
 {% load i18n %}
-
+{% block extra_title %}- {% trans 'Checkout' %}{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
