@@ -1,0 +1,9 @@
+{% load i18n %}
+<a href="{% url 'products' %}" class="btn btn-lg my-btn">
+        <i class="fas fa-chevron-left"></i>
+    <span class="text-uppercase">{% trans 'Keep Shopping' %}</span>
+</a>
+<a href="{% url 'checkout' %}" class="btn btn-lg my-btn">
+    <span class="text-uppercase">{% trans 'Secure Checkout' %}</span>
+        <i class="fas fa-lock"></i>
+</a>

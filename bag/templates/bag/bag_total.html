@@ -1,0 +1,17 @@
+{% load i18n %}
+<h6><strong>{% trans 'Bag Total:' %} MDL {{ total|floatformat:2 }}</strong></h6>
+<h6>{% trans 'Delivery:' %} MDL {{ delivery|floatformat:2 }}</h6>
+<h6>{% trans 'Discount:' %} MDL {{ discount|floatformat:2 }}</h6>
+<div class="coupon"> 
+    <form action="{% url "apply" %}" method="POST">
+    {{ coupon_apply_form | crispy }}
+    <input class="btn btn-sm my-btn" type="submit" value="{% trans 'Apply' %}">
+    {% csrf_token %}
+    </form>
+</div>
+<h4 class="mt-4"><strong>{% trans 'Grand Total:' %} MDL {{ grand_total|floatformat:2 }}</strong></h4>
+{% if free_delivery_delta > 0 %}
+    <p class="mb-1 text-danger">
+        {% trans 'You could get free delivery by spending just ' %}<strong>MDL {{ free_delivery_delta }}</strong>{% trans ' more!' %}
+    </p>
+{% endif %}

@@ -24,6 +24,12 @@ ul {
     border: 1px solid #555;
 
 }
+
+.coupon {
+    width: 150px;
+    display: inline-block;
+}
+
 /* index style*/
 
 .index-height {
@@ -299,7 +305,7 @@ ul.timeline>li:before {
 }
 
 /* adjust for smaller screens */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 
     .btn {
         padding: .375rem .375rem;
@@ -309,4 +315,12 @@ ul.timeline>li:before {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+}
+
+@media (max-width: 1200px) {
+
+    .btn {
+        font-size: .75rem;
+    }
+
 }
