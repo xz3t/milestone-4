@@ -109,17 +109,13 @@
                                         <input type="submit" value="{% trans "Apply" %}">
                                         {% csrf_token %}
                                     </form>
-                                    <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
-                                        <span class="icon">
+                                    <a href="{% url 'products' %}" class="btn btn-lg my-btn">
                                             <i class="fas fa-chevron-left"></i>
-                                        </span>
                                         <span class="text-uppercase">{% trans 'Keep Shopping' %}</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-lg my-btn">
                                         <span class="text-uppercase">{% trans 'Secure Checkout' %}</span>
-                                        <span class="icon">
                                             <i class="fas fa-lock"></i>
-                                        </span>
                                     </a>
                                 </td>
                             </tr>
