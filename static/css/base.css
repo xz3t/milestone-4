@@ -312,6 +312,11 @@ ul.timeline>li:before {
         font-size: .75rem;
     }
 
+    .btn-search {
+        padding: .375rem .75rem;
+        font-size: 1rem;
+    }
+
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
@@ -321,6 +326,11 @@ ul.timeline>li:before {
 
     .btn {
         font-size: .75rem;
+    }
+    
+    .btn-search {
+        padding: .375rem .75rem;
+        font-size: 1rem;
     }
 
 }

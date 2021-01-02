@@ -14,7 +14,6 @@
 
 {% get_current_language as LANGUAGE_CODE %}
 
-
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="container">
@@ -31,38 +30,36 @@
             </div>
         </div>
     <div class="row align-items-center">
-        <div class="col-md-12 order-lg-2 col-lg-5">
+        <div class="col-md-12 order-lg-2 col-lg-6">
             <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group">
-                         <input class="form-control border" type="text" name="q" placeholder="Search our site">
-                         <div class="input-group-append">
-                         <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                         <span class="icon">
-                            <i class="fas fa-search"></i>
-                         </span>
-                         </button>
-                         </div>
-                     </div>
+                <div class="input-group">
+                    <input class="form-control border" type="text" name="q" placeholder="{% trans 'Search our site' %}">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-search border rounded-0" type="submit">
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="col-sm-6 order-lg-1 col-lg-3">
-                    <p class="text-muted mt-3 ">
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small "><a href="{% url 'products' %} ">Products Home</a> | </span> {% endif %} {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }} "</strong>{% endif %}
-                    </p>
+            <p class="text-muted mt-3 ">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span class="small "><a href="{% url 'products' %} ">{% trans 'Products Home' %}</a> | </span> {% endif %} {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }} "</strong>{% endif %}
+            </p>
         </div>
-        <div class="col-sm-6 order-lg-3 col-lg-4">
-                     <div class="sort-select-wrapper w-50 ml-auto ml-lg-n1">
-                        <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                                </select>
-                     </div>
+        <div class="col-sm-6 order-lg-3 col-lg-3">
+            <div class="sort-select-wrapper w-50 ml-auto">
+            <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>{% trans 'Sort by...' %}</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>{% trans 'Price (low to high)' %}</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>{% trans 'Price (high to low)' %}</option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>{% trans 'Name (A-Z)' %}</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>{% trans 'Name (Z-A)' %}</option>
+                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>{% trans 'Category (A-Z)' %}</option>
+                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>{% trans 'Category (Z-A)' %}</option>
+            </select>
+            </div>
         </div>
     </div>
         <div class="row">
@@ -83,17 +80,17 @@
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     {% if LANGUAGE_CODE == 'ro' %}
-                                        <p class="mb-0">{{ product.name_ro }}</p>
+                                    <p class="mb-0">{{ product.name_ro }}</p>
                                     {% elif LANGUAGE_CODE == 'ru' %}
-                                        <p class="mb-0">{{ product.name_ru }}</p>
+                                    <p class="mb-0">{{ product.name_ru }}</p>
                                     {% else %}
-                                        <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0">{{ product.name }}</p>
                                     {% endif %}
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">MDL{{ product.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">MDL {{ product.price }}</p>
                                              {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -102,15 +99,15 @@
                                             </p>
                                             {% endif %}
                                             {% if product.available %}
-                                            <small class="text-muted"> Available</small> 
+                                            <small class="text-muted">{% trans "Available" %}</small> 
                                             {% else %}
-                                            <small class="text-muted">Not in stock</small> 
+                                            <small class="text-danger">{% trans "Not in stock" %}</small> 
                                             {% endif %}
                                             {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                </small>
+                                            <small class="ml-3">
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </small>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -123,7 +120,7 @@
         </div>
     </div>
 </div>
-    <div class="btt-button shadow-sm rounded-1 border border-black">
+    <div class="btt-button shadow-sm rounded-1 border">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up mx-auto my-auto"></i>
         </a>	
