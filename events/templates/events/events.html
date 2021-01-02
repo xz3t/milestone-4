@@ -13,31 +13,37 @@
 
 {% block content %}
     <div class="overlay"></div>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-                <h2 class="mb-4">{% trans "Events & News" %}</h2>
-                <hr>
-                <ul class="timeline">
-                     {% for eve in event %}
-                    <li>
-                        {% if eve.url is None %}
-                        <h5>{{ eve.date }}</h5>
-                        <p>{{ eve.name }}</p>
-                        <p> {{ eve.description }} </p>
-                        <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
-                        {% else %}
+    <div class="container">
+            <hr>
+            <h2 class="mb-4">{% trans "Events & News" %}</h2>
+            <hr>
+    <div class="row">
+        <div class="col-md-12">
+            {% for eve in event %}
+            <div class="card bg-light mb-3">
+                
+                {% if eve.url is None %}
+                <div class="card-header">
+                    <i class="far fa-calendar-alt"></i> {{ eve.date }}
+                </div>
+                <div class="card-body">
+                    <h6>{{ eve.name }}</h6>
+                    <p class="small"> {{ eve.description }} </p>
+                    <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
+                </div>
+                {% else %}
+                    <div class="card-header">
+                       <i class="far fa-calendar-alt"></i> {{ eve.date }}
+                    </div>
+                    <div class="card-body">
                         <a href="{{ eve.url }}" target="_blank">
-                        <h5>{{ eve.date }}</h5>
-                        <p>{{ eve.name }}</p>
-                        <p> {{ eve.description }} </p>
+                        <h6>{{ eve.name }}</h6>
+                        <p class="small"> {{ eve.description }} </p>
                         <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}"></a>
-                        {% endif %}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+                    </div>
+                {% endif %}
+            </div>{% endfor %}  
         </div>
+    </div>
     </div>
 {% endblock %}
