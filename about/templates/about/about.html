@@ -55,8 +55,14 @@
                     <i class="far fa-calendar-alt"></i> {{ x.name }}
                 </div>
                 <div class="card-body">
-                    <p class="small"> {{ x.description }} </p>
-                    <img class="img-fluid" src="{{ x.image.url }}" alt="{{ x.name }}">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="{{ x.image.url }}" alt="{{ x.name }}">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="small"> {{ x.description }} </p>
+                        </div>
+                    </div>
                 </div>
                 <a href="{{ x.url }}" target="_blank" class="stretched-link"></a>
             </div>
