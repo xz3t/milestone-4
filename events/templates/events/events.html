@@ -27,18 +27,30 @@
                     <i class="far fa-calendar-alt"></i> {{ eve.date }}
                 </div>
                 <div class="card-body">
-                    <h6>{{ eve.name }}</h6>
-                    <p class="small"> {{ eve.description }} </p>
-                    <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>{{ eve.name }}</h6>
+                        <p class="small"> {{ eve.description }} </p>
+                        </div>
+                    </div>
                 </div>
                 {% else %}
                     <div class="card-header">
                        <i class="far fa-calendar-alt"></i> {{ eve.date }}
                     </div>
                     <div class="card-body">
-                        <h6>{{ eve.name }}</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>{{ eve.name }}</h6>
                         <p class="small"> {{ eve.description }} </p>
-                        <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
+                        </div>
+                    </div>
                         <a href="{{ eve.url }}" target="_blank" class="stretched-link"></a>
                     </div>
                 {% endif %}
