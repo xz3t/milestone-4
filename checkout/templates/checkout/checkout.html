@@ -76,16 +76,16 @@
             </div>
             <div class="col-12 col-lg-6">
                     <div class="text-center">
-                        <button id="on-delivery" class="btn rounded-0">
+                        <button id="on-delivery" class="btn my-btn">
                             <span class="text-uppercase">{% trans 'Pay on delivery' %}</span>
                         </button>
-                        <button id="by-card" class="btn rounded-0">
+                        <button id="by-card" class="btn my-btn">
                             <span class="text-uppercase">{% trans 'Pay by card' %}</span>
                         </button>
                     </div>
-                    <p class="text-muted">{% trans 'Please fill out the form below to complete your order' %}</p>
                 <!-- stripe payment form  -->
                 <div class="stripe-pay">
+                <p class="text-muted">{% trans 'Please fill out the form below to complete your order' %}</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
@@ -128,57 +128,21 @@
 						<span>{% trans 'Your card will be charged' %} <strong>MDL {{ grand_total|floatformat:2 }}</strong></span>	
                         </p>
                         <p class="text-center">
-                        <button id="submit-button" class="btn">
-							<span class="font-weight-bold">{% trans 'Complete Order' %}</span>
+                        <button id="submit-button" class="btn my-btn">
+							<span class="font-weight-bold text-uppercase">{% trans 'Complete Order' %}</span>
 								<i class="fas fa-lock"></i>
 						</button></p>
 
                 </form>
             </div>
             <!-- pay on delivery form-->
-                <div class="order-pay-delivery">
-                <form action="{% url 'checkout' %}" method="POST" id="order-pay-delivery">
-                    {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">{% trans 'Details' %}</legend>
-                        {{ order_form.full_name | as_crispy_field }}
-                        {{ order_form.email | as_crispy_field }}
-                    </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">{% trans 'Delivery' %}</legend>
-                        {{ order_form.phone_number | as_crispy_field }}
-                        {{ order_form.country | as_crispy_field }}
-                        {{ order_form.postcode | as_crispy_field }}
-                        {{ order_form.town_or_city | as_crispy_field }}
-                        {{ order_form.street_address1 | as_crispy_field }}
-                        {{ order_form.street_address2 | as_crispy_field }}
-                        {{ order_form.county | as_crispy_field }}
-                        <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">{% trans 'Save this delivery information to my profile' %}</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">{% trans 'Create an account' %}</a>{% trans ' or ' %}
-                                    <a class="text-info" href="{% url 'account_login' %}">{% trans 'login' %}</a>{% trans ' to save this information' %}
-                                </label>
-							{% endif %}
-						</div>
-                    </fieldset>
-                        <p class="text-center">
-                        <button id="submit--on-delivery" class="btn">
-							<span class="font-weight-bold">{% trans 'Complete Order' %}</span>
-								<i class="fas fa-lock"></i>
-						</button></p>
-
-                </form>
-            </div>
+                <div class="order-pay-delivery mt-5">
+                 <h3> {% trans "Feature coming soon..." %}</h3>
+                </div>
                     <div class="submit-button text-left mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
-							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
-							</span>
-							<span class="font-weight-bold">{% trans 'Adjust Bag' %}</span>
+							<span class="font-weight-bold text-uppercase">{% trans 'Adjust Bag' %}</span>
 						</a>
 					</div>
         </div>
