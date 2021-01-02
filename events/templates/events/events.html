@@ -36,10 +36,10 @@
                        <i class="far fa-calendar-alt"></i> {{ eve.date }}
                     </div>
                     <div class="card-body">
-                        <a href="{{ eve.url }}" target="_blank">
                         <h6>{{ eve.name }}</h6>
                         <p class="small"> {{ eve.description }} </p>
-                        <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}"></a>
+                        <img class="img-fluid" src="{{ eve.image.url }}" alt="{{ eve.name }}">
+                        <a href="{{ eve.url }}" target="_blank" class="stretched-link"></a>
                     </div>
                 {% endif %}
             </div>{% endfor %}  

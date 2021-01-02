@@ -51,7 +51,6 @@
             <hr>
             {% for x in about %}
             <div class="card bg-light mb-3">
-                <a href="{{ x.url }}" target="_blank" >
                 <div class="card-header">
                     <i class="far fa-calendar-alt"></i> {{ x.name }}
                 </div>
@@ -59,7 +58,7 @@
                     <p class="small"> {{ x.description }} </p>
                     <img class="img-fluid" src="{{ x.image.url }}" alt="{{ x.name }}">
                 </div>
-                </a>
+                <a href="{{ x.url }}" target="_blank" class="stretched-link"></a>
             </div>
             {% endfor %}
         </div>
