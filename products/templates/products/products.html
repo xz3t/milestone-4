@@ -22,11 +22,14 @@
                 <hr>
                 <h2 class="mb-4">{% trans 'Products' %}</h2>
                 <hr>
+                {% if current_categories %}
                 {% for c in current_categories %}
                     <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
                 {% endfor %}
+                <hr>
+                {% endif %}
             </div>
         </div>
     <div class="row align-items-center">
