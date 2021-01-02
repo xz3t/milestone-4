@@ -158,7 +158,23 @@ footer {
     border-color: #dc3545;
 }
 
-/* events & news section */
+/* about */
+
+.about-links a {
+  text-decoration: none;
+}
+
+.about-links a:visited {
+  text-decoration: none;
+}
+
+.about-links a:hover {
+  text-decoration: none;
+}
+
+.about-links a:active {
+  text-decoration: none;
+}
 
 
 /* bootsrap toast */

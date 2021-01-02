@@ -4,34 +4,66 @@
 {% block extra_title %}- {% trans 'About' %}{% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <hr>
-                <h2 class="mb-4">{% trans 'About' %}</h2>
-                <hr>
-                <p>our statment is to deliver bla bla bla</p>
-
-                <h3 class="text-center">{% trans 'About us in press' %}</h3>
-                  {% for x in about %}
-                    <li>
-                        <h5>{{ x.name }}</h5>
-                        <p>{{ x.description }}</p>
-                        <p> {{ eve.description }} </p>
-                        <img class="img-fluid" src="{{ x.image.url }}" alt="{{ eve.name }}">
-                        <p><a href="{{ x.url }}"> url to article</a></p>
-                    </li>
-                    {% endfor %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <h2 class="mb-4">{% trans 'About' %}</h2>
+            <hr>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'ro' %}
+                <p>
+                    Echipa noastră e mică de tot - doar două persoane - B și F (masa corporală totală - 115 kg ), care
+                    incercă să facă față tuturor provocărilor legate de stupi, rame, îngrijirea albinilor, drumuri,
+                    stoarcerea mierii, ambalarea, promovarea, vânzarea și livrarea produselor (aici după scenariu vin niște
+                    aplause, încurajări și empatie ).
+                    <br>
+                    De 10 ani împreună ca cuplu, de 6 ani ca parteneri ”de miere” și ajutor reciproc. Și cei mai buni
+                    prieteni.
+                </p>
+            {% elif LANGUAGE_CODE == 'ru' %}
+                <p>
+                    Наша команда совсем небольшая - всего два человека (общей массой не более 115 кг) - М и Ж, которые
+                    пытаются с улыбкой на лице справится со всеми работами, заботами и вызовами, связанными с ульями,
+                    рамками, пчелками, переездами, качкой меда, упаковкой, продвижением, продажей и доставкой нашего
+                    любимого товара (здесь мы достойно встречаем ваш поток оваций, сочувствия и эмпатии).
+                    <br>
+                    10 лет вместе как пара, 6 лет как партнеры медо-диллеры (или медовые партнеры?) и помощники друг для
+                    друга во всем. А, и еще лучшие друзья.
+                </p>
+            {% else %}
+            <p>Small family business producing natural honey and derivated products, as well as made from-zero handmade
+                soaps, shampoos and cosmetics. The couple makes part of a small ecovillage project, created in the
+                center of Republic of Moldova 15 yers ago (www.schastlivoe.com) inspired by permacultural and
+                sustainable living principles.</p>
+            {% endif %}
+            <hr>
+            <h2 class="mb-4">{% trans 'Articles' %}</h2>
+            <hr>
+            {% for x in about %}
+            <div class="card bg-light mb-3">
+                <a href="{{ x.url }}" target="_blank" >
+                <div class="card-header">
+                    <i class="far fa-calendar-alt"></i> {{ x.name }}
+                </div>
+                <div class="card-body">
+                    <p class="small"> {{ x.description }} </p>
+                    <img class="img-fluid" src="{{ x.image.url }}" alt="{{ x.name }}">
+                </div>
+                </a>
             </div>
+            {% endfor %}
         </div>
     </div>
+</div>
+
 {% endblock %}
