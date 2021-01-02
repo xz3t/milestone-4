@@ -14,12 +14,14 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
+                <hr>
+                <h2 class="mb-4">{% trans 'Edit Review' %}</h2>
+                <hr>
     <div class="card">
         <div class="card-body">
-            <h3 class="text-center">Edit Review</h3>
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ form  }}
+                {{ form | crispy }}
                 <input type="submit" value="Save Changes" class="btn btn-danger">
             </form>
             </div>
