@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib import messages
 from django.utils.translation import ugettext as _
@@ -17,11 +18,14 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
+            from_email = form.cleaned_data['email']
             message = form.cleaned_data['message']
+            body = render_to_string(
+                'contact/contact_email/contact_email.txt',
+                {'from_email': from_email, 'message': message})
             send_mail(
                 subject,
-                message,
+                body,
                 from_email,
                 [settings.DEFAULT_FROM_EMAIL,],
             )
