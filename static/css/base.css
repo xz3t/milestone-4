@@ -114,8 +114,8 @@ footer {
 .card-img-products {
     height: 19em;
     max-height: 20em ;
-    -o-object-fit: fill;
-    object-fit: fill;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .btt-button {
