@@ -9,8 +9,10 @@ from .forms import ContactForm
 
 # Create your views here.
 
+
 def contact(request):
-    """ A view to show contact form """
+    """ A view to show contact form,
+        on_profile_page used to not display shopping bag in success toast"""
 
     if request.method == 'GET':
         form = ContactForm()
@@ -27,8 +29,12 @@ def contact(request):
                 subject,
                 body,
                 from_email,
-                [settings.DEFAULT_FROM_EMAIL,],
+                [settings.DEFAULT_FROM_EMAIL, ],
             )
-            messages.success(request, _('Success! Thank you for your message.'))
+            messages.success(
+                request, _('Success! Thank you for your message.'))
 
-    return render(request, 'contact/contact.html', {'form': form})
+    return render(
+        request,
+        'contact/contact.html',
+        {'form': form, 'on_profile_page': True})
