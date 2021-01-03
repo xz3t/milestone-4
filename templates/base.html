@@ -138,6 +138,15 @@
         mypos = newscroll;
     });
     </script>
+
+    <!-- close toast on click outside the toast -> https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside-->
+    <script>
+    $('body').click(function(e) {
+    if (!$(e.target).closest('.message-container').length){
+        $(".message-container").hide();
+    }
+    });
+    </script>
     {% endblock %}
 
   </body>

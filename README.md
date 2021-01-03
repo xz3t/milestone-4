@@ -151,3 +151,4 @@ The couple makes part of a small ecovillage project, created in the center of th
 - review : https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir
 - coupons : https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo
 - hide delivery/language selection header : https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up
+- close div on click outside : https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside

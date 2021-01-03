@@ -180,7 +180,9 @@ footer {
 /* bootsrap toast */
 
 .message-container {
-
+    position: fixed;
+    top: 125px;
+    right: 5px;
     z-index: 99999999999;
 }
 
