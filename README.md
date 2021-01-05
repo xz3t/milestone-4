@@ -1,8 +1,8 @@
-#  Name of the app
+#  APINI MD
 
-[View the live project here.](https://xm/)
+[View the live project here.](https://apinimd.herokuapp.com/)
 
-into 
+The project objective is to create a full stack site around an business with e-commerce feature using Python with Django Framwork/PostgreSQL/AWS/Stripe payment methond and deploy the project to Heroku.
 
 ![Preview](/docs/responsive.jpg)
 
@@ -52,11 +52,11 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 -   ### Design
     -   #### Color Scheme
-        -   
+        -   Simple is better, black/white/grey colors are used.
     -   #### Typography
-        -   
+        -   Roboto Slab is used throughout the site with fall back to Serif.
     -   #### Imagery
-        -  
+        -   All images are provided by recipient of the site.
 
 *   ### Wireframes
 
@@ -69,11 +69,10 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Technologies Used
 
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
--   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-
+    * [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
 
@@ -81,15 +80,22 @@ The couple makes part of a small ecovillage project, created in the center of th
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 2. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-
-5. [Font Awesome:](https://fontawesome.com/)
+3. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-6. [JQuery](https://en.wikipedia.org/wiki/JQuery)
+4. [Bootstrap](https://getbootstrap.com/)
+    - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+5. [JQuery](https://en.wikipedia.org/wiki/JQuery)
     - JavaScript library designed to simplify HTML DOM tree traversal and manipulation, event handling, css animation.
-
-9. [Heroku](https://en.wikipedia.org/wiki/Heroku)
+6. [Heroku](https://en.wikipedia.org/wiki/Heroku)
     - Heroku is a cloud platform as a service (PaaS) supporting several programming languages, including Python used in this project.
-
+7. [PostgreSQL](https://www.postgresql.org/)
+    - PostgreSQL, also known as Postgres, is a free and open-source relational database management system.
+8. [Django](https://www.djangoproject.com/)
+    - The web framework for perfectionists with deadlines.
+9. [Stripe API](https://stripe.com/)
+    - Payment processing system.
+10. [AWS S3](https://aws.amazon.com/s3/)
+    - Amazon Simple Storage Service (Amazon S3) is an object storage service used to store static and media files for this project.
 
 ## Testing
 
@@ -108,29 +114,68 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ### Known Bugs
 
-
+- back to top link from products page doesnt work on some mobiles, might have a clash with hide delivery header script.
 - 
 
 ### Features to implement
 
-- 
+- Implement Twillio API for SMS confirmation of orders
 
 ## Deployment
+
+### Local Deployment
+
+Requirements: 
+1. Installed Python on your environment 
+2. An AWS account with S3 bucket setup
+3. As Stripe account
+
+Environment variables:
+
+    * SECRET_KEY = secret key for django app
+    * DEVELOPMENT = "True" variable to set Debug to True, also will use console.EmailBackend
+    * EMAIL_HOST_USER = User for live emails
+    * EMAIL_HOST_PASS = Password for live emails
+    * DATABASE_URL = with youre link to databse if not setup local sqlite3 will be used
+    * STRIPE_PUBLIC_KEY = Public key from Stripe
+    * STRIPE_SECRET_KEY = Secret key from Stripe
+    * STRIPE_WH_SECRET  = Webhook secret key from Stripe
+    * USE_AWS  = True to use static and media files from S3 account
+    * AWS_ACCESS_KEY_ID = AWS Access Key Id
+    * AWS_SECRET_ACCESS_KEY = AWS Secret Access Key
+
+1. Open Console navigate to directory project will be created.
+2. get a local copy : "git clone https://github.com/xz3t/milestone-4.git"
+3. Install the requirements: "pip3 install -r requirements.txt"
+4. Create a superuser: python3 manage.py create superuser
+5. Set up database: "python3 manage.py makemigrations" , "python3 manage.py migrate"
+6. For a copy of products: "python3 manage.py loaddata products"
+7. For a copy of events: "python3 manage.py loaddata events"
+8. For a copy of about: "python3 manage.py loaddata about"
+9. If using AWS set up all variables and copy media/ folder to your S3 bucket
+10. Run localy: python3 manage.py runserver
+
 
 ### Heroku with Github integration
 
 1. Create a Procfile with the terminal command echo web: python app.py > Procfile.
 2. Create a requirements.txt: pip3 freeze --local > requirements.txt.
 3. Push and commit requirements.txt and Procfile
+3. On Heroku app page, go to Resources tab in Add-on section search and add Heroku Postgres Set up
 4. On the Heroku app page, click on the Deploy, find Deployment method and select GitHub
 5. In search for repository to connect to select desired repo-name and link it to Heroku.
 6. On the Heroku app page, click on Settings -> Reveal Config Vars
 7. Set the Config Vars in the Settings: 
-    - Debug: False; 
-    - IP: 0.0.0.0; 
-    - PORT: 5000;
-    - MONGO_URI: mongodb+srv://username:password@myfirstcluster.kmobf.mongodb.net/weeklyShopping?retryWrites=true&w=majority;
-    - SECRET_KEY: <your_secret_key>.
+    * SECRET_KEY = secret key for django app
+    * EMAIL_HOST_USER = User for live emails
+    * EMAIL_HOST_PASS = Password for live emails
+    * DATABASE_URL = with youre link to Heroku Postgres databse
+    * STRIPE_PUBLIC_KEY = Public key from Stripe
+    * STRIPE_SECRET_KEY = Secret key from Stripe
+    * STRIPE_WH_SECRET  = Webhook secret key from Stripe
+    * USE_AWS  = True to use static and media files from S3 account
+    * AWS_ACCESS_KEY_ID = AWS Access Key Id
+    * AWS_SECRET_ACCESS_KEY = AWS Secret Access Key
 8. Navigate back Deploy section, click on the Deploy Branch, you can enable Automatic Deploy, in automatic mode every push to GitHub wil automatically the latest version.
 9. Now app is deployed on Heroku, you can open and view it by clicking on the Open app on top of the page.
 
