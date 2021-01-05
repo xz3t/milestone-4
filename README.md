@@ -69,10 +69,10 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Technologies Used
 
-    * [HTML5](https://en.wikipedia.org/wiki/HTML5)
-    * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-    * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-    * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+     [HTML5](https://en.wikipedia.org/wiki/HTML5)
+     [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+     [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+     [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
 
@@ -114,7 +114,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ### Known Bugs
 
-- back to top link from products page doesnt work on some mobiles, might have a clash with hide delivery header script.
+- Back to top link from products page doesnt work on some mobiles, might have a clash with hide delivery header script.
 - 
 
 ### Features to implement
@@ -145,7 +145,7 @@ Environment variables:
     * AWS_SECRET_ACCESS_KEY = AWS Secret Access Key
 
 1. Open Console navigate to directory project will be created.
-2. get a local copy : "git clone https://github.com/xz3t/milestone-4.git"
+2. Get a local copy : "git clone https://github.com/xz3t/milestone-4.git"
 3. Install the requirements: "pip3 install -r requirements.txt"
 4. Create a superuser: python3 manage.py create superuser
 5. Set up database: "python3 manage.py makemigrations" , "python3 manage.py migrate"
@@ -183,7 +183,7 @@ Environment variables:
     
 ### Media
 
--   
+- All pictures are provided by recipent of the project and have copyright on them.
 
 
 ### Acknowledgements
@@ -193,7 +193,7 @@ Environment variables:
 
 ### Links
 
-- review : https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir
-- coupons : https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo
-- hide delivery/language selection header : https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up
-- close div on click outside : https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside
+- review : [Link] (https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
+- coupons : [Link] (https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
+- hide delivery/language selection header : [Link] (https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
+- close div on click outside : [Link] (https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside)
