@@ -98,7 +98,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Testing
 
-[Testing] (https://github.com/xz3t/milestone-4/blob/master/TESTING.md)
+[Testing](https://github.com/xz3t/milestone-4/blob/master/TESTING.md)
 
 
 ### Known Bugs
@@ -182,7 +182,7 @@ Environment variables:
 
 ### Links
 
-- review : [Link] (https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
-- coupons : [Link] (https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
-- hide delivery/language selection header : [Link] (https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
-- close div on click outside : [Link] (https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside)
+- review : [Link](https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
+- coupons : [Link](https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
+- hide delivery/language selection header :[Link] (https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
+- close div on click outside : [Link](https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside)
