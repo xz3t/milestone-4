@@ -59,7 +59,6 @@ The couple makes part of a small ecovillage project, created in the center of th
         -   All images are provided by recipient of the site.
 
 *   ### Wireframes
-
     -   Wireframes - [View](/docs/wireframes.html)
 
 ## Features
@@ -69,10 +68,10 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Technologies Used
 
-     [HTML5](https://en.wikipedia.org/wiki/HTML5)
-     [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-     [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-     [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    - [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
 
@@ -99,17 +98,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Testing
 
--
-
-### Features Testing
-
-#### Main page
-- 
-
-
-### Further Testing
-
--   
+[Testing] (https://github.com/xz3t/milestone-4/blob/master/TESTING.md)
 
 
 ### Known Bugs
@@ -183,7 +172,7 @@ Environment variables:
     
 ### Media
 
-- All pictures are provided by recipent of the project and have copyright on them.
+-   All pictures are provided by recipent of the project and have copyright on them.
 
 
 ### Acknowledgements
