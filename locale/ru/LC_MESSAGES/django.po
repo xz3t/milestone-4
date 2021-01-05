@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 19:33+0000\n"
+"POT-Creation-Date: 2021-01-05 19:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1));\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: about/templates/about/about.html:4 about/templates/about/about.html:20
 #: templates/includes/footer.html:22 templates/includes/main-nav.html:20
 msgid "About"
-msgstr "Despre noi"
+msgstr ""
 
 #: about/templates/about/about.html:50
 msgid "Articles"
@@ -351,19 +352,15 @@ msgstr ""
 #: home/templates/home/index.html:22 templates/includes/footer.html:21
 #: templates/includes/main-nav.html:17
 msgid "Events & News"
-msgstr "Evenimente & Noutati"
+msgstr ""
 
 #: home/templates/home/index.html:19
-#, fuzzy
-#| msgid "Shop"
 msgid "Shop Now"
-msgstr "Magazin"
+msgstr ""
 
 #: products/templates/products/add_product.html:4
-#, fuzzy
-#| msgid "All products"
 msgid "Add Products"
-msgstr "Toate produsele"
+msgstr ""
 
 #: products/templates/products/edit_product.html:4
 msgid "Edit Product"
@@ -419,10 +416,8 @@ msgstr ""
 
 #: products/templates/products/products.html:4
 #: products/templates/products/products.html:23
-#, fuzzy
-#| msgid "All products"
 msgid "Products"
-msgstr "Toate produsele"
+msgstr ""
 
 #: products/templates/products/products.html:39
 msgid "Search our site"
@@ -927,7 +922,7 @@ msgstr ""
 
 #: templates/base.html:47
 msgid "Free delivery over"
-msgstr "Livrare gratuita la comenzi peste"
+msgstr ""
 
 #: templates/includes/footer.html:7
 msgid ""
@@ -937,29 +932,27 @@ msgstr ""
 
 #: templates/includes/footer.html:17 templates/includes/main-nav.html:10
 msgid "All products"
-msgstr "Toate produsele"
+msgstr ""
 
 #: templates/includes/footer.html:18 templates/includes/main-nav.html:11
 msgid "Honey & Mixes"
-msgstr "Miere si mixuri"
+msgstr ""
 
 #: templates/includes/footer.html:19
-#, fuzzy
-#| msgid "Bee products"
 msgid "Bee Product"
-msgstr "Produse apicole"
+msgstr ""
 
 #: templates/includes/footer.html:20 templates/includes/main-nav.html:13
 msgid "Cosmetics"
-msgstr "Cosmetice"
+msgstr ""
 
 #: templates/includes/main-nav.html:7
 msgid "Shop"
-msgstr "Magazin"
+msgstr ""
 
 #: templates/includes/main-nav.html:12
 msgid "Bee products"
-msgstr "Produse apicole"
+msgstr ""
 
 #: templates/includes/main-nav.html:33
 msgid "Product Management"
