@@ -26,7 +26,7 @@ msgstr "Despre noi"
 
 #: about/templates/about/about.html:50
 msgid "Articles"
-msgstr ""
+msgstr "Articole"
 
 #: apini_md/settings.py:174
 msgid "English"
@@ -42,15 +42,15 @@ msgstr ""
 
 #: bag/templates/bag/bag.html:5 bag/templates/bag/bag.html:21
 msgid "Shopping Bag"
-msgstr ""
+msgstr "Cosul meu"
 
 #: bag/templates/bag/bag.html:38
 msgid "A summary of your bag contents is below"
-msgstr ""
+msgstr "Un rezumat al conținutului cosului dvs. este mai jos"
 
 #: bag/templates/bag/bag.html:51
 msgid "Price Each:"
-msgstr ""
+msgstr "Pret bucata:"
 
 #: bag/templates/bag/bag.html:52
 msgid "Subtotal:"
@@ -58,15 +58,15 @@ msgstr ""
 
 #: bag/templates/bag/bag.html:72
 msgid "Product Info"
-msgstr ""
+msgstr "Informatiile produsului"
 
 #: bag/templates/bag/bag.html:74
 msgid "Price"
-msgstr ""
+msgstr "Pret"
 
 #: bag/templates/bag/bag.html:75
 msgid "Qty"
-msgstr ""
+msgstr "Cantitate"
 
 #: bag/templates/bag/bag.html:76 checkout/templates/checkout/checkout.html:38
 msgid "Subtotal"
@@ -74,25 +74,25 @@ msgstr ""
 
 #: bag/templates/bag/bag.html:112
 msgid "No items in shopping bag."
-msgstr ""
+msgstr "Nu aveti nici un produs in cos."
 
 #: bag/templates/bag/bag_total.html:2
 msgid "Bag Total:"
-msgstr ""
+msgstr "Total cos:"
 
 #: bag/templates/bag/bag_total.html:3
 #: checkout/templates/checkout/checkout.html:66
 msgid "Delivery:"
-msgstr ""
+msgstr "Livrare:"
 
 #: bag/templates/bag/bag_total.html:4
 #: checkout/templates/checkout/checkout.html:65
 msgid "Discount:"
-msgstr ""
+msgstr "Reducere:"
 
 #: bag/templates/bag/bag_total.html:8
 msgid "Apply"
-msgstr ""
+msgstr "Applica"
 
 #: bag/templates/bag/bag_total.html:12
 #: checkout/templates/checkout/checkout.html:67
@@ -101,11 +101,11 @@ msgstr ""
 
 #: bag/templates/bag/bag_total.html:15
 msgid "You could get free delivery by spending just "
-msgstr ""
+msgstr "Ați putea primi livrare gratuită cheltuiind doar"
 
 #: bag/templates/bag/bag_total.html:15
 msgid " more!"
-msgstr ""
+msgstr " mai mult!"
 
 #: bag/templates/bag/checkout_btns.html:4
 #: products/templates/products/product_detail.html:101
@@ -114,189 +114,189 @@ msgstr ""
 
 #: bag/templates/bag/checkout_btns.html:7
 msgid "Secure Checkout"
-msgstr ""
+msgstr "Continua"
 
 #: bag/templates/bag/qty_form.html:29
 msgid "Update"
-msgstr ""
+msgstr "Actualizați"
 
 #: bag/templates/bag/qty_form.html:30 products/widgets.py:6
 #: templates/allauth/account/email.html:38
 #: templates/allauth/socialaccount/connections.html:35
 msgid "Remove"
-msgstr ""
+msgstr "Elimina"
 
 #: checkout/templates/checkout/checkout.html:5
 #: checkout/templates/checkout/checkout.html:25
 msgid "Checkout"
-msgstr ""
+msgstr "Continua"
 
 #: checkout/templates/checkout/checkout.html:32
 msgid "Order Summary"
-msgstr ""
+msgstr "Rezumat Comanda"
 
 #: checkout/templates/checkout/checkout.html:35
 msgid "Item"
-msgstr ""
+msgstr "Articol"
 
 #: checkout/templates/checkout/checkout.html:64
 msgid "Order Total:"
-msgstr ""
+msgstr "Total comanda:"
 
 #: checkout/templates/checkout/checkout.html:80
 msgid "Pay on delivery"
-msgstr ""
+msgstr "Plata la livrare"
 
 #: checkout/templates/checkout/checkout.html:83
 msgid "Pay by card"
-msgstr ""
+msgstr "Plata cu card"
 
 #: checkout/templates/checkout/checkout.html:88
 msgid "Please fill out the form below to complete your order"
-msgstr ""
+msgstr "Vă rugăm să completați formularul de mai jos pentru a finaliza comanda"
 
 #: checkout/templates/checkout/checkout.html:92
 msgid "Details"
-msgstr ""
+msgstr "Detalii"
 
 #: checkout/templates/checkout/checkout.html:97
 #: checkout/templates/checkout/checkout_success.html:179
 msgid "Delivery"
-msgstr ""
+msgstr "Livrare"
 
 #: checkout/templates/checkout/checkout.html:107
 msgid "Save this delivery information to my profile"
-msgstr ""
+msgstr "Salvați aceste informații de livrare în profilul meu"
 
 #: checkout/templates/checkout/checkout.html:111
 msgid "Create an account"
-msgstr ""
+msgstr "Creează un cont"
 
 #: checkout/templates/checkout/checkout.html:111
 msgid " or "
-msgstr ""
+msgstr " sau "
 
 #: checkout/templates/checkout/checkout.html:112
 msgid "login"
-msgstr ""
+msgstr "autentifica"
 
 #: checkout/templates/checkout/checkout.html:112
 msgid " to save this information"
-msgstr ""
+msgstr " pentru a salva aceste informatii"
 
 #: checkout/templates/checkout/checkout.html:118
 msgid "Payment"
-msgstr ""
+msgstr "Plata"
 
 #: checkout/templates/checkout/checkout.html:128
 msgid "Your card will be charged"
-msgstr ""
+msgstr "Cardul dvs. va fi taxat "
 
 #: checkout/templates/checkout/checkout.html:132
 msgid "Complete Order"
-msgstr ""
+msgstr "Finalizeaza comanda"
 
 #: checkout/templates/checkout/checkout.html:140
 msgid "Feature coming soon..."
-msgstr ""
+msgstr " Disponibil in curand"
 
 #: checkout/templates/checkout/checkout.html:145
 msgid "Adjust Bag"
-msgstr ""
+msgstr "Ajusteaza cosul"
 
 #: checkout/templates/checkout/checkout_success.html:4
 msgid "Checkout Success"
-msgstr ""
+msgstr "Succes"
 
 #: checkout/templates/checkout/checkout_success.html:20
 msgid "Thank You"
-msgstr ""
+msgstr " Va Mulțumim"
 
 #: checkout/templates/checkout/checkout_success.html:22
 msgid "Your order information is below. A confirmation email will be sent to "
-msgstr ""
+msgstr "Informațiile comenzii dvs. sunt mai jos. Un e-mail de confirmare va fi trimis la"
 
 #: checkout/templates/checkout/checkout_success.html:30
 msgid "Order Info:"
-msgstr ""
+msgstr "Informații despre comandă"
 
 #: checkout/templates/checkout/checkout_success.html:36
 #: profiles/templates/profiles/profile.html:45
 msgid "Order Number"
-msgstr ""
+msgstr "Numar comandă"
 
 #: checkout/templates/checkout/checkout_success.html:45
 msgid "Order Date"
-msgstr ""
+msgstr "Data comenzii"
 
 #: checkout/templates/checkout/checkout_success.html:54
 msgid "Order Details:"
-msgstr ""
+msgstr "Detalii:"
 
 #: checkout/templates/checkout/checkout_success.html:73
 msgid "each"
-msgstr ""
+msgstr "fiecare"
 
 #: checkout/templates/checkout/checkout_success.html:80
 msgid "Delivering To:"
-msgstr ""
+msgstr "Livrat la:"
 
 #: checkout/templates/checkout/checkout_success.html:86
 msgid "Full Name"
-msgstr ""
+msgstr "Numele complet"
 
 #: checkout/templates/checkout/checkout_success.html:95
 msgid "Address 1"
-msgstr ""
+msgstr "Adresa 1"
 
 #: checkout/templates/checkout/checkout_success.html:105
 msgid "Address 2"
-msgstr ""
+msgstr "Adresa 2"
 
 #: checkout/templates/checkout/checkout_success.html:116
 msgid "County"
-msgstr ""
+msgstr "Județul"
 
 #: checkout/templates/checkout/checkout_success.html:126
 msgid "Town or City"
-msgstr ""
+msgstr "Oras"
 
 #: checkout/templates/checkout/checkout_success.html:136
 msgid "Postal Code"
-msgstr ""
+msgstr "Cod postal"
 
 #: checkout/templates/checkout/checkout_success.html:146
 msgid "Country"
-msgstr ""
+msgstr "Țară"
 
 #: checkout/templates/checkout/checkout_success.html:155
 msgid "Phone Number"
-msgstr ""
+msgstr "Numar telefon"
 
 #: checkout/templates/checkout/checkout_success.html:164
 msgid "Billing Info:"
-msgstr ""
+msgstr "Informații factură:"
 
 #: checkout/templates/checkout/checkout_success.html:170
 #: profiles/templates/profiles/profile.html:48
 msgid "Order Total"
-msgstr ""
+msgstr "Total comanda"
 
 #: checkout/templates/checkout/checkout_success.html:187
 msgid "Discount"
-msgstr ""
+msgstr "Reducere"
 
 #: checkout/templates/checkout/checkout_success.html:196
 msgid "Grand Total"
-msgstr ""
+msgstr "Total"
 
 #: checkout/templates/checkout/checkout_success.html:209
 msgid "Back to Profile"
-msgstr ""
+msgstr "Înapoi la profil"
 
 #: checkout/views.py:71
 msgid "One of the products in your bag wasn't found in our database."
-msgstr ""
+msgstr "Unul dintre produsele din geantă nu a fost găsit în baza noastră de date."
 
 #: checkout/views.py:79
 msgid ""
@@ -306,7 +306,7 @@ msgstr ""
 
 #: checkout/views.py:84
 msgid "There's nothing in your bag at the moment"
-msgstr ""
+msgstr "Momentan nu e nimic în cosul tau"
 
 #: checkout/views.py:116
 msgid ""
@@ -325,27 +325,27 @@ msgstr ""
 #: contact/templates/contact/contact.html:18 templates/includes/footer.html:23
 #: templates/includes/main-nav.html:23
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: contact/templates/contact/contact.html:31
 msgid "Send a message"
-msgstr ""
+msgstr "Trimite un mesaj"
 
 #: contact/views.py:35
 msgid "Success! Thank you for your message."
-msgstr ""
+msgstr "Succes! Multumesc pentru mesajul tau."
 
 #: coupons/forms.py:6
 msgid "Coupon"
-msgstr ""
+msgstr "Cupon"
 
 #: coupons/views.py:22
 msgid "Coupon applied!"
-msgstr ""
+msgstr "Cupon a fost aplicat!"
 
 #: coupons/views.py:25
 msgid "Invalid or expired coupon!"
-msgstr ""
+msgstr "Cupon nevalid sau expirat!"
 
 #: events/templates/events/events.html:4 events/templates/events/events.html:18
 #: home/templates/home/index.html:22 templates/includes/footer.html:21
@@ -372,29 +372,29 @@ msgstr ""
 #: products/templates/products/editreview.html:4
 #: products/templates/products/editreview.html:18
 msgid "Edit Review"
-msgstr ""
+msgstr "Editați recenzia"
 
 #: products/templates/products/product_detail.html:4
 msgid "Product Detail"
-msgstr ""
+msgstr "Detalii produs"
 
 #: products/templates/products/product_detail.html:57
 #: products/templates/products/products.html:105
 msgid "Available"
-msgstr ""
+msgstr "Disponibil"
 
 #: products/templates/products/product_detail.html:59
 #: products/templates/products/products.html:107
 msgid "Not in stock"
-msgstr ""
+msgstr "Nu este în stoc"
 
 #: products/templates/products/product_detail.html:60
 msgid "Back in stock:"
-msgstr ""
+msgstr "Înapoi în stoc:"
 
 #: products/templates/products/product_detail.html:104
 msgid "Add to Bag"
-msgstr ""
+msgstr "Adăugați în coș"
 
 #: products/templates/products/product_detail.html:106
 msgid "N/A"
@@ -402,20 +402,20 @@ msgstr ""
 
 #: products/templates/products/product_detail.html:119
 msgid "Reviews"
-msgstr ""
+msgstr "Recenzii"
 
 #: products/templates/products/product_detail.html:121
 #: products/templates/products/product_detail.html:129
 msgid "Add Review"
-msgstr ""
+msgstr "Adăugați o recenzie"
 
 #: products/templates/products/product_detail.html:137
 msgid "Review"
-msgstr ""
+msgstr "Recenzie"
 
 #: products/templates/products/product_detail.html:143
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: products/templates/products/products.html:4
 #: products/templates/products/products.html:23
@@ -426,39 +426,39 @@ msgstr "Toate produsele"
 
 #: products/templates/products/products.html:39
 msgid "Search our site"
-msgstr ""
+msgstr "Căutați pe site-ul nostru"
 
 #: products/templates/products/products.html:51
 msgid "Products Home"
-msgstr ""
+msgstr "Produse"
 
 #: products/templates/products/products.html:57
 msgid "Sort by..."
-msgstr ""
+msgstr "Filtrează după..."
 
 #: products/templates/products/products.html:58
 msgid "Price (low to high)"
-msgstr ""
+msgstr "Preț (mic la mare)"
 
 #: products/templates/products/products.html:59
 msgid "Price (high to low)"
-msgstr ""
+msgstr "Preț (mare la mic)"
 
 #: products/templates/products/products.html:60
 msgid "Name (A-Z)"
-msgstr ""
+msgstr "Nume (A-Z)"
 
 #: products/templates/products/products.html:61
 msgid "Name (Z-A)"
-msgstr ""
+msgstr "Nume (Z-A)"
 
 #: products/templates/products/products.html:62
 msgid "Category (A-Z)"
-msgstr ""
+msgstr "Categorie"
 
 #: products/templates/products/products.html:63
 msgid "Category (Z-A)"
-msgstr ""
+msgstr "Categorie"
 
 #: products/widgets.py:7
 msgid "Current Image"
@@ -467,35 +467,35 @@ msgstr ""
 #: profiles/templates/profiles/profile.html:4
 #: profiles/templates/profiles/profile.html:24
 msgid "My Profile"
-msgstr ""
+msgstr "Profilul meu"
 
 #: profiles/templates/profiles/profile.html:30
 msgid "Default Delivery Information"
-msgstr ""
+msgstr "Informații de livrare implicite"
 
 #: profiles/templates/profiles/profile.html:35
 msgid "Update Information"
-msgstr ""
+msgstr "Actualizați informațiile"
 
 #: profiles/templates/profiles/profile.html:40
 msgid "Order History"
-msgstr ""
+msgstr "Istoric comenzi"
 
 #: profiles/templates/profiles/profile.html:46
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: profiles/templates/profiles/profile.html:47
 msgid "Items"
-msgstr ""
+msgstr "Articole"
 
 #: profiles/views.py:22
 msgid "Profile updated successfully"
-msgstr ""
+msgstr "Profilul a fost actualizat cu succes"
 
 #: profiles/views.py:24
 msgid "Update failed. Please ensure the form is valid."
-msgstr ""
+msgstr "Actualizare esuata. Vă rugăm să vă asigurați că formularul este valid."
 
 #: profiles/views.py:45
 #, python-brace-format
@@ -503,6 +503,8 @@ msgid ""
 "This is a past confirmation for order number {order_number}.A confirmation "
 "email was sent on the order date."
 msgstr ""
+"Aceasta este o confirmare anterioară pentru numărul de comandă {order_number}. O confirmare "
+"a fost trimis pe e-mail la data comenzii."
 
 #: templates/allauth/account/account_inactive.html:5
 #: templates/allauth/account/account_inactive.html:9
@@ -967,19 +969,19 @@ msgstr ""
 
 #: templates/includes/main-nav.html:35
 msgid "Logout"
-msgstr ""
+msgstr "Deconectați-vă"
 
 #: templates/includes/main-nav.html:36
 msgid "Register"
-msgstr ""
+msgstr "Inregistreaza-te"
 
 #: templates/includes/main-nav.html:37
 msgid "Login"
-msgstr ""
+msgstr "Autentificare"
 
 #: templates/includes/toasts/toast_success.html:19
 msgid "Your Bag"
-msgstr ""
+msgstr "Cosul tau"
 
 #: templates/includes/toasts/toast_success.html:32
 msgid "Qty:"
@@ -987,12 +989,12 @@ msgstr ""
 
 #: templates/includes/toasts/toast_success.html:45
 msgid "Spend"
-msgstr ""
+msgstr "Cheltuie"
 
 #: templates/includes/toasts/toast_success.html:45
 msgid "more to get free next day delivery!"
-msgstr ""
+msgstr " mai mult pentru a benificia de livrare gratuita!"
 
 #: templates/includes/toasts/toast_success.html:49
 msgid "Go To Secure Checkout"
-msgstr ""
+msgstr "Continua"

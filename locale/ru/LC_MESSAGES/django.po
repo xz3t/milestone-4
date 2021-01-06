@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -23,291 +22,293 @@ msgstr ""
 #: about/templates/about/about.html:4 about/templates/about/about.html:20
 #: templates/includes/footer.html:22 templates/includes/main-nav.html:20
 msgid "About"
-msgstr ""
+msgstr "О нас"
 
 #: about/templates/about/about.html:50
 msgid "Articles"
-msgstr ""
+msgstr "Статьи"
 
 #: apini_md/settings.py:174
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
 #: apini_md/settings.py:175
 msgid "Romanian"
-msgstr ""
+msgstr "Румынский"
 
 #: apini_md/settings.py:176
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 #: bag/templates/bag/bag.html:5 bag/templates/bag/bag.html:21
 msgid "Shopping Bag"
-msgstr ""
+msgstr "Корзина"
 
 #: bag/templates/bag/bag.html:38
 msgid "A summary of your bag contents is below"
-msgstr ""
+msgstr "Обзор вашей корзины"
 
 #: bag/templates/bag/bag.html:51
 msgid "Price Each:"
-msgstr ""
+msgstr "Цена каждого"
 
 #: bag/templates/bag/bag.html:52
 msgid "Subtotal:"
-msgstr ""
+msgstr "Итого:"
 
 #: bag/templates/bag/bag.html:72
 msgid "Product Info"
-msgstr ""
+msgstr "Информация о продукте"
 
 #: bag/templates/bag/bag.html:74
 msgid "Price"
-msgstr ""
+msgstr "Цена"
 
 #: bag/templates/bag/bag.html:75
 msgid "Qty"
-msgstr ""
+msgstr "Количество"
 
 #: bag/templates/bag/bag.html:76 checkout/templates/checkout/checkout.html:38
 msgid "Subtotal"
-msgstr ""
+msgstr "Итого"
 
 #: bag/templates/bag/bag.html:112
 msgid "No items in shopping bag."
-msgstr ""
+msgstr "В корзине отсутствуют товары"
 
 #: bag/templates/bag/bag_total.html:2
 msgid "Bag Total:"
-msgstr ""
+msgstr "Товары на сумму:"
 
 #: bag/templates/bag/bag_total.html:3
 #: checkout/templates/checkout/checkout.html:66
 msgid "Delivery:"
-msgstr ""
+msgstr "Стоимость доставки:"
 
 #: bag/templates/bag/bag_total.html:4
 #: checkout/templates/checkout/checkout.html:65
 msgid "Discount:"
-msgstr ""
+msgstr "Скидка:"
 
 #: bag/templates/bag/bag_total.html:8
 msgid "Apply"
-msgstr ""
+msgstr "Применить:"
 
 #: bag/templates/bag/bag_total.html:12
 #: checkout/templates/checkout/checkout.html:67
 msgid "Grand Total:"
-msgstr ""
+msgstr "Общая сумма к оплате:"
 
 #: bag/templates/bag/bag_total.html:15
 msgid "You could get free delivery by spending just "
-msgstr ""
+msgstr "Вы можете получить бесплатную доставку потратив еще"
 
 #: bag/templates/bag/bag_total.html:15
 msgid " more!"
-msgstr ""
+msgstr " "
 
 #: bag/templates/bag/checkout_btns.html:4
 #: products/templates/products/product_detail.html:101
 msgid "Keep Shopping"
-msgstr ""
+msgstr "Продолжить покупки"
 
 #: bag/templates/bag/checkout_btns.html:7
 msgid "Secure Checkout"
-msgstr ""
+msgstr "Оформление заказа"
 
 #: bag/templates/bag/qty_form.html:29
 msgid "Update"
-msgstr ""
+msgstr "Обновить"
 
 #: bag/templates/bag/qty_form.html:30 products/widgets.py:6
 #: templates/allauth/account/email.html:38
 #: templates/allauth/socialaccount/connections.html:35
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 #: checkout/templates/checkout/checkout.html:5
 #: checkout/templates/checkout/checkout.html:25
 msgid "Checkout"
-msgstr ""
+msgstr "Оформить"
 
 #: checkout/templates/checkout/checkout.html:32
 msgid "Order Summary"
-msgstr ""
+msgstr "Сумма заказа"
 
 #: checkout/templates/checkout/checkout.html:35
 msgid "Item"
-msgstr ""
+msgstr "Продукт"
 
 #: checkout/templates/checkout/checkout.html:64
 msgid "Order Total:"
-msgstr ""
+msgstr "Сумма к оплате:"
 
 #: checkout/templates/checkout/checkout.html:80
 msgid "Pay on delivery"
-msgstr ""
+msgstr "Оплата при получении"
 
 #: checkout/templates/checkout/checkout.html:83
 msgid "Pay by card"
-msgstr ""
+msgstr "Оплатить картой"
 
 #: checkout/templates/checkout/checkout.html:88
 msgid "Please fill out the form below to complete your order"
-msgstr ""
+msgstr "Пожалуйста, заполните форму чтобы завершить оформление заказа"
 
 #: checkout/templates/checkout/checkout.html:92
 msgid "Details"
-msgstr ""
+msgstr "Подробности"
 
 #: checkout/templates/checkout/checkout.html:97
 #: checkout/templates/checkout/checkout_success.html:179
 msgid "Delivery"
-msgstr ""
+msgstr "Доставка"
 
 #: checkout/templates/checkout/checkout.html:107
 msgid "Save this delivery information to my profile"
-msgstr ""
+msgstr "Сохранить данные о доставке в моем профиле"
 
 #: checkout/templates/checkout/checkout.html:111
 msgid "Create an account"
-msgstr ""
+msgstr "Создайте профиль"
 
 #: checkout/templates/checkout/checkout.html:111
 msgid " or "
-msgstr ""
+msgstr "или"
 
 #: checkout/templates/checkout/checkout.html:112
 msgid "login"
-msgstr ""
+msgstr "Войти"
 
 #: checkout/templates/checkout/checkout.html:112
 msgid " to save this information"
-msgstr ""
+msgstr "чтобы сохранить эту информацию"
 
 #: checkout/templates/checkout/checkout.html:118
 msgid "Payment"
-msgstr ""
+msgstr "Оплата"
 
 #: checkout/templates/checkout/checkout.html:128
 msgid "Your card will be charged"
-msgstr ""
+msgstr "С вашей карты будут сняты средства"
 
 #: checkout/templates/checkout/checkout.html:132
 msgid "Complete Order"
-msgstr ""
+msgstr "Завершить заказ"
 
 #: checkout/templates/checkout/checkout.html:140
 msgid "Feature coming soon..."
-msgstr ""
+msgstr "Функция скоро появится…"
 
 #: checkout/templates/checkout/checkout.html:145
 msgid "Adjust Bag"
-msgstr ""
+msgstr "Вернуться в корзину"
 
 #: checkout/templates/checkout/checkout_success.html:4
 msgid "Checkout Success"
-msgstr ""
+msgstr "Заказ оформлен"
 
 #: checkout/templates/checkout/checkout_success.html:20
 msgid "Thank You"
-msgstr ""
+msgstr "Благодарим!"
 
 #: checkout/templates/checkout/checkout_success.html:22
 msgid "Your order information is below. A confirmation email will be sent to "
-msgstr ""
+msgstr "Информация о заказе указана ниже. Подтверждение будет выслано на ваш e-mail"
 
 #: checkout/templates/checkout/checkout_success.html:30
 msgid "Order Info:"
-msgstr ""
+msgstr "Информация о заказе"
 
 #: checkout/templates/checkout/checkout_success.html:36
 #: profiles/templates/profiles/profile.html:45
 msgid "Order Number"
-msgstr ""
+msgstr "Номер заказа"
 
 #: checkout/templates/checkout/checkout_success.html:45
 msgid "Order Date"
-msgstr ""
+msgstr "Дата заказа"
 
 #: checkout/templates/checkout/checkout_success.html:54
 msgid "Order Details:"
-msgstr ""
+msgstr "Детали заказа:"
 
 #: checkout/templates/checkout/checkout_success.html:73
 msgid "each"
-msgstr ""
+msgstr "каждый"
 
 #: checkout/templates/checkout/checkout_success.html:80
 msgid "Delivering To:"
-msgstr ""
+msgstr "Доставить в:"
 
 #: checkout/templates/checkout/checkout_success.html:86
 msgid "Full Name"
-msgstr ""
+msgstr "Полное имя"
 
 #: checkout/templates/checkout/checkout_success.html:95
 msgid "Address 1"
-msgstr ""
+msgstr "Адрес 1"
 
 #: checkout/templates/checkout/checkout_success.html:105
 msgid "Address 2"
-msgstr ""
+msgstr "Адрес 2"
 
 #: checkout/templates/checkout/checkout_success.html:116
 msgid "County"
-msgstr ""
+msgstr "Район/Муниципий"
 
 #: checkout/templates/checkout/checkout_success.html:126
 msgid "Town or City"
-msgstr ""
+msgstr "Город/Населенный пункт"
 
 #: checkout/templates/checkout/checkout_success.html:136
 msgid "Postal Code"
-msgstr ""
+msgstr "Почтовый индекс"
 
 #: checkout/templates/checkout/checkout_success.html:146
 msgid "Country"
-msgstr ""
+msgstr "Страна"
 
 #: checkout/templates/checkout/checkout_success.html:155
 msgid "Phone Number"
-msgstr ""
+msgstr "Номер телефона"
 
 #: checkout/templates/checkout/checkout_success.html:164
 msgid "Billing Info:"
-msgstr ""
+msgstr "Сведения об оплате:"
 
 #: checkout/templates/checkout/checkout_success.html:170
 #: profiles/templates/profiles/profile.html:48
 msgid "Order Total"
-msgstr ""
+msgstr "Общая сумма"
 
 #: checkout/templates/checkout/checkout_success.html:187
 msgid "Discount"
-msgstr ""
+msgstr "Скидка"
 
 #: checkout/templates/checkout/checkout_success.html:196
 msgid "Grand Total"
-msgstr ""
+msgstr "Итого к оплате"
 
 #: checkout/templates/checkout/checkout_success.html:209
 msgid "Back to Profile"
-msgstr ""
+msgstr "Вернуться к профилю"
 
 #: checkout/views.py:71
 msgid "One of the products in your bag wasn't found in our database."
-msgstr ""
+msgstr "Один из товаров из вашей Корзины не найден на складе"
 
 #: checkout/views.py:79
 msgid ""
 "There was an error with your form.                 Please double check your "
 "information."
 msgstr ""
+"Произошла ошибка.                 Пожалуйста, проверьте правильность заполнения"
+" ."
 
 #: checkout/views.py:84
 msgid "There's nothing in your bag at the moment"
-msgstr ""
+msgstr "В данный момент Ваша корзина пуста"
 
 #: checkout/views.py:116
 msgid ""
@@ -318,179 +319,181 @@ msgstr ""
 #: checkout/views.py:159
 #, python-brace-format
 msgid ""
-"Order successfully processed!         Your order number is {order_number}. A "
-"confirmation         email will be sent to {order.email}."
+"Order successfully processed!          Your order number is {order_number}. A "
+"confirmation           email will be sent to {order.email}."
 msgstr ""
+"Заказ успешно оформлен!            Номер Вашего заказа {order_number}."
+" Подтверждение         будет выслано на Ваш e-mail {order.email}."
 
 #: contact/templates/contact/contact.html:4
 #: contact/templates/contact/contact.html:18 templates/includes/footer.html:23
 #: templates/includes/main-nav.html:23
 msgid "Contact"
-msgstr ""
+msgstr "Контакты"
 
 #: contact/templates/contact/contact.html:31
 msgid "Send a message"
-msgstr ""
+msgstr "Отправить сообщение"
 
 #: contact/views.py:35
 msgid "Success! Thank you for your message."
-msgstr ""
+msgstr "Отправлено! Спасибо за Ваше сообщение."
 
 #: coupons/forms.py:6
 msgid "Coupon"
-msgstr ""
+msgstr "Купон"
 
 #: coupons/views.py:22
 msgid "Coupon applied!"
-msgstr ""
+msgstr "Купон применен!"
 
 #: coupons/views.py:25
 msgid "Invalid or expired coupon!"
-msgstr ""
+msgstr "Неверный или просроченный купон!"
 
 #: events/templates/events/events.html:4 events/templates/events/events.html:18
 #: home/templates/home/index.html:22 templates/includes/footer.html:21
 #: templates/includes/main-nav.html:17
 msgid "Events & News"
-msgstr ""
+msgstr "Новости & Мероприятия "
 
 #: home/templates/home/index.html:19
 msgid "Shop Now"
-msgstr ""
+msgstr "В магазин"
 
 #: products/templates/products/add_product.html:4
 msgid "Add Products"
-msgstr ""
+msgstr "Добавить товары"
 
 #: products/templates/products/edit_product.html:4
 msgid "Edit Product"
-msgstr ""
+msgstr "Изменить"
 
 #: products/templates/products/editreview.html:4
 #: products/templates/products/editreview.html:18
 msgid "Edit Review"
-msgstr ""
+msgstr "Редактировать отзыв"
 
 #: products/templates/products/product_detail.html:4
 msgid "Product Detail"
-msgstr ""
+msgstr "Подробнее о товаре"
 
 #: products/templates/products/product_detail.html:57
 #: products/templates/products/products.html:105
 msgid "Available"
-msgstr ""
+msgstr "В наличии"
 
 #: products/templates/products/product_detail.html:59
 #: products/templates/products/products.html:107
 msgid "Not in stock"
-msgstr ""
+msgstr "Нет в наличии"
 
 #: products/templates/products/product_detail.html:60
 msgid "Back in stock:"
-msgstr ""
+msgstr "Снова в наличии:"
 
 #: products/templates/products/product_detail.html:104
 msgid "Add to Bag"
-msgstr ""
+msgstr "Добавить в Корзину"
 
 #: products/templates/products/product_detail.html:106
 msgid "N/A"
-msgstr ""
+msgstr "Н/Д"
 
 #: products/templates/products/product_detail.html:119
 msgid "Reviews"
-msgstr ""
+msgstr "Отзывы"
 
 #: products/templates/products/product_detail.html:121
 #: products/templates/products/product_detail.html:129
 msgid "Add Review"
-msgstr ""
+msgstr "Добавить отзыв"
 
 #: products/templates/products/product_detail.html:137
 msgid "Review"
-msgstr ""
+msgstr "Отзыв"
 
 #: products/templates/products/product_detail.html:143
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: products/templates/products/products.html:4
 #: products/templates/products/products.html:23
 msgid "Products"
-msgstr ""
+msgstr "Продукция"
 
 #: products/templates/products/products.html:39
 msgid "Search our site"
-msgstr ""
+msgstr "Поиск по сайту"
 
 #: products/templates/products/products.html:51
 msgid "Products Home"
-msgstr ""
+msgstr "Продукция главная страница"
 
 #: products/templates/products/products.html:57
 msgid "Sort by..."
-msgstr ""
+msgstr "Сортировать по…"
 
 #: products/templates/products/products.html:58
 msgid "Price (low to high)"
-msgstr ""
+msgstr "Цена (от низкой к высокой)"
 
 #: products/templates/products/products.html:59
 msgid "Price (high to low)"
-msgstr ""
+msgstr "Цена (от высокой к низкой)"
 
 #: products/templates/products/products.html:60
 msgid "Name (A-Z)"
-msgstr ""
+msgstr "Название (от А до Я)"
 
 #: products/templates/products/products.html:61
 msgid "Name (Z-A)"
-msgstr ""
+msgstr "Название (от Я до А)"
 
 #: products/templates/products/products.html:62
 msgid "Category (A-Z)"
-msgstr ""
+msgstr "Категория (от А до Я)"
 
 #: products/templates/products/products.html:63
 msgid "Category (Z-A)"
-msgstr ""
+msgstr "Категория (от Я до А)"
 
 #: products/widgets.py:7
 msgid "Current Image"
-msgstr ""
+msgstr "Текущее изображение"
 
 #: profiles/templates/profiles/profile.html:4
 #: profiles/templates/profiles/profile.html:24
 msgid "My Profile"
-msgstr ""
+msgstr "Мой профиль"
 
 #: profiles/templates/profiles/profile.html:30
 msgid "Default Delivery Information"
-msgstr ""
+msgstr "Информация о доставке по умолчанию"
 
 #: profiles/templates/profiles/profile.html:35
 msgid "Update Information"
-msgstr ""
+msgstr "Обновить информацию"
 
 #: profiles/templates/profiles/profile.html:40
 msgid "Order History"
-msgstr ""
+msgstr "История заказов"
 
 #: profiles/templates/profiles/profile.html:46
 msgid "Date"
-msgstr ""
+msgstr "Дата"
 
 #: profiles/templates/profiles/profile.html:47
 msgid "Items"
-msgstr ""
+msgstr "Товары"
 
 #: profiles/views.py:22
 msgid "Profile updated successfully"
-msgstr ""
+msgstr "Профиль успешно обновлен"
 
 #: profiles/views.py:24
 msgid "Update failed. Please ensure the form is valid."
-msgstr ""
+msgstr "Не удалось обновить. Пожалуйста, проверьте заполнение"
 
 #: profiles/views.py:45
 #, python-brace-format
@@ -498,35 +501,37 @@ msgid ""
 "This is a past confirmation for order number {order_number}.A confirmation "
 "email was sent on the order date."
 msgstr ""
+"Это истекшее подтверждение для заказа под номером {order_number}. Подтверждающее"
+"письмо было выслано в день оформления заказа"
 
 #: templates/allauth/account/account_inactive.html:5
 #: templates/allauth/account/account_inactive.html:9
 msgid "Account Inactive"
-msgstr ""
+msgstr "Неактивный профиль"
 
 #: templates/allauth/account/account_inactive.html:12
 msgid "This account is inactive."
-msgstr ""
+msgstr "Этот профиль не активирован."
 
 #: templates/allauth/account/email.html:5
 msgid "Account"
-msgstr ""
+msgstr "Профиль"
 
 #: templates/allauth/account/email.html:9
 msgid "E-mail Addresses"
-msgstr ""
+msgstr "Адреса электронной почты"
 
 #: templates/allauth/account/email.html:12
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Следующие адреса электронной почты были связаны с Вашим профилем:"
 
 #: templates/allauth/account/email.html:26
 msgid "Verified"
-msgstr ""
+msgstr "Проверено"
 
 #: templates/allauth/account/email.html:28
 msgid "Unverified"
-msgstr ""
+msgstr "Не проверено"
 
 #: templates/allauth/account/email.html:30
 msgid "Primary"
@@ -922,70 +927,72 @@ msgstr ""
 
 #: templates/base.html:47
 msgid "Free delivery over"
-msgstr ""
+msgstr "Бесплатная доставка от"
 
 #: templates/includes/footer.html:7
 msgid ""
 "We are small family business producing natural honey and derivated products, "
 "as well as made from-zero handmade soaps, shampoos, and cosmetics"
 msgstr ""
+"У нас небольшое семейное дело по производству меда и продукции пчеловодства, "
+"а так же натурального мыла ручной работы, шампуней и косметики"
 
 #: templates/includes/footer.html:17 templates/includes/main-nav.html:10
 msgid "All products"
-msgstr ""
+msgstr "Вся продукция"
 
 #: templates/includes/footer.html:18 templates/includes/main-nav.html:11
 msgid "Honey & Mixes"
-msgstr ""
+msgstr "Мед & Миксы"
 
 #: templates/includes/footer.html:19
 msgid "Bee Product"
-msgstr ""
+msgstr "Продукты пчеловодства"
 
 #: templates/includes/footer.html:20 templates/includes/main-nav.html:13
 msgid "Cosmetics"
-msgstr ""
+msgstr "Косметика"
 
 #: templates/includes/main-nav.html:7
 msgid "Shop"
-msgstr ""
+msgstr "Магазин"
 
 #: templates/includes/main-nav.html:12
 msgid "Bee products"
-msgstr ""
+msgstr "Продукты пчеловодства"
 
 #: templates/includes/main-nav.html:33
 msgid "Product Management"
-msgstr ""
+msgstr "Управление товарами"
 
 #: templates/includes/main-nav.html:35
 msgid "Logout"
-msgstr ""
+msgstr "Выйти из профиля"
 
 #: templates/includes/main-nav.html:36
 msgid "Register"
-msgstr ""
+msgstr "Регистрация"
 
 #: templates/includes/main-nav.html:37
 msgid "Login"
-msgstr ""
+msgstr "Войти"
 
 #: templates/includes/toasts/toast_success.html:19
 msgid "Your Bag"
-msgstr ""
+msgstr "Ваша Корзина"
 
 #: templates/includes/toasts/toast_success.html:32
 msgid "Qty:"
-msgstr ""
+msgstr "Количество:"
 
 #: templates/includes/toasts/toast_success.html:45
 msgid "Spend"
-msgstr ""
+msgstr "Потратьте еще"
 
 #: templates/includes/toasts/toast_success.html:45
 msgid "more to get free next day delivery!"
-msgstr ""
+msgstr "чтобы получить бесплатную доставку!"
 
 #: templates/includes/toasts/toast_success.html:49
 msgid "Go To Secure Checkout"
-msgstr ""
+msgstr "Перейти к оформлению заказа"
