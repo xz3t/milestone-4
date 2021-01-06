@@ -1,0 +1,7 @@
+- bug: discount does not appear on success page
+-  was not saving discount in order, created discount file din orders models
+-   modified update total function to extract discount
+- added discount foueld to admin OrderAdmin
+- in bag context added a session key with discount calculated from the bag
+- save discount from session_discount to order.discount
+- issue: when amending order in admin panel discount willnot change, solution to save discount as a % value and use it in calculations.

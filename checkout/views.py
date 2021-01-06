@@ -39,7 +39,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-
+        discount = request.session.get('session_discount', {})
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -57,6 +57,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            order.discount = discount
             order.save()
             for item_id, item_data in bag.items():
                 try:

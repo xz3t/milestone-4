@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from decimal import Decimal
 
 from django_countries.fields import CountryField
 
@@ -33,6 +34,8 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
+    discount = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(
@@ -60,7 +63,7 @@ class Order(models.Model):
                 self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         else:
             self.delivery_cost = 0
-        self.grand_total = self.order_total + self.delivery_cost
+        self.grand_total = self.order_total + self.delivery_cost - Decimal(self.discount)
         self.save()
 
     def save(self, *args, **kwargs):

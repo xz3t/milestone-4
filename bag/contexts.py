@@ -11,7 +11,6 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -35,6 +34,7 @@ def bag_contents(request):
         discount = (coupon.discount / Decimal('100')) * total
     else:
         discount = 0
+    request.session['session_discount'] = str(discount)
 
     grand_total = delivery + total - discount
 
