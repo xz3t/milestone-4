@@ -1,7 +1,7 @@
 {% load i18n %}
 <h6><strong>{% trans 'Bag Total:' %} MDL {{ total|floatformat:2 }}</strong></h6>
 <h6>{% trans 'Delivery:' %} MDL {{ delivery|floatformat:2 }}</h6>
-<h6>{% trans 'Discount:' %} MDL {{ discount|floatformat:2 }}</h6>
+<h6>{% trans 'Discount:' %} MDL - {{ discount|floatformat:2 }}</h6>
 <div class="coupon"> 
     <form action="{% url "apply" %}" method="POST">
     {{ coupon_apply_form | crispy }}
