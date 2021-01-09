@@ -158,7 +158,14 @@ footer {
     border-color: #dc3545;
 }
 
-/* about */
+/* bag section */
+
+.update-link,
+.remove-item{
+    cursor: pointer;
+}
+
+/* about section */
 
 .about-links a {
   text-decoration: none;
