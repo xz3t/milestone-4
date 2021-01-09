@@ -392,6 +392,10 @@ msgstr "Нет в наличии"
 msgid "Back in stock:"
 msgstr "Снова в наличии:"
 
+#: products/templates/products/product_detail.html:73
+msgid "Quantity:"
+msgstr "Количество:"
+
 #: products/templates/products/product_detail.html:104
 msgid "Add to Bag"
 msgstr "Добавить в Корзину"

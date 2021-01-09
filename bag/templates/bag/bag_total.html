@@ -12,6 +12,6 @@
 <h4 class="mt-4"><strong>{% trans 'Grand Total:' %} MDL {{ grand_total|floatformat:2 }}</strong></h4>
 {% if free_delivery_delta > 0 %}
     <p class="mb-1 text-danger">
-        {% trans 'You could get free delivery by spending just ' %}<strong>MDL {{ free_delivery_delta }}</strong>{% trans ' more!' %}
+        {% trans 'You could get free delivery by spending just ' %}<strong> MDL {{ free_delivery_delta }}</strong>{% trans ' more!' %}
     </p>
 {% endif %}
