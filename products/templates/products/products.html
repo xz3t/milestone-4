@@ -1,5 +1,5 @@
-{% extends "base.html" %} 
-{% load static %} 
+{% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% block extra_title %}- {% trans 'Products' %}{% endblock %}
 
@@ -9,7 +9,7 @@
         <div class="col"></div>
     </div>
 </div>
-{% endblock %} 
+{% endblock %}
 {% block content %}
 
 {% get_current_language as LANGUAGE_CODE %}
@@ -24,139 +24,151 @@
                 <hr>
                 {% if current_categories %}
                 {% for c in current_categories %}
-                    <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
-                    </a>
+                <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                </a>
                 {% endfor %}
                 <hr>
                 {% endif %}
             </div>
         </div>
-    <div class="row align-items-center">
-        <div class="col-md-12 order-lg-2 col-lg-6">
-            <form method="GET" action="{% url 'products' %}">
-                <div class="input-group">
-                    <input class="form-control border" type="text" name="q" placeholder="{% trans 'Search our site' %}">
-                    <div class="input-group-append">
-                        <button class="form-control btn btn-search border rounded-0" type="submit">
-                        <i class="fas fa-search"></i>
-                        </button>
+        <div class="row align-items-center">
+            <div class="col-md-12 order-lg-2 col-lg-6">
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group">
+                        <input class="form-control border" type="text" name="q"
+                            placeholder="{% trans 'Search our site' %}">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-search border rounded-0" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </div>
+                </form>
+            </div>
+            <div class="col-sm-6 order-lg-1 col-lg-3">
+                <p class="text-muted mt-3 ">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                    <span class="small "><a href="{% url 'products' %} ">{% trans 'Products Home' %}</a> | </span>
+                    {% endif %} {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}
+                        "</strong>{% endif %}
+                </p>
+            </div>
+            <div class="col-sm-6 order-lg-3 col-lg-3">
+                <div class="sort-select-wrapper w-50 ml-auto">
+                    <select id="sort-selector"
+                        class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>
+                            {% trans 'Sort by...' %}</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+                            {% trans 'Price (low to high)' %}</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+                            {% trans 'Price (high to low)' %}</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>
+                            {% trans 'Name (A-Z)' %}</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                            {% trans 'Name (Z-A)' %}</option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                            {% trans 'Category (A-Z)' %}</option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                            {% trans 'Category (Z-A)' %}</option>
+                    </select>
                 </div>
-            </form>
-        </div>
-        <div class="col-sm-6 order-lg-1 col-lg-3">
-            <p class="text-muted mt-3 ">
-                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <span class="small "><a href="{% url 'products' %} ">{% trans 'Products Home' %}</a> | </span> {% endif %} {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }} "</strong>{% endif %}
-            </p>
-        </div>
-        <div class="col-sm-6 order-lg-3 col-lg-3">
-            <div class="sort-select-wrapper w-50 ml-auto">
-            <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>{% trans 'Sort by...' %}</option>
-                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>{% trans 'Price (low to high)' %}</option>
-                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>{% trans 'Price (high to low)' %}</option>
-                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>{% trans 'Name (A-Z)' %}</option>
-                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>{% trans 'Name (Z-A)' %}</option>
-                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>{% trans 'Category (A-Z)' %}</option>
-                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>{% trans 'Category (Z-A)' %}</option>
-            </select>
             </div>
         </div>
-    </div>
-        <div class="row">
-            <div class="product-container">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 card-padding">
-                            <div class="card h-100 shadow-sm rounded">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-products card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-products card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    {% if LANGUAGE_CODE == 'ro' %}
-                                    <p class="mb-0">{{ product.name_ro }}</p>
-                                    {% elif LANGUAGE_CODE == 'ru' %}
-                                    <p class="mb-0">{{ product.name_ru }}</p>
-                                    {% else %}
-                                    <p class="mb-0">{{ product.name }}</p>
+        <div class="product-container">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 card-padding">
+                    <div class="card h-100 shadow-sm rounded">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-products card-img-top img-fluid" src="{{ product.image.url }}"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-products card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            {% if LANGUAGE_CODE == 'ro' %}
+                            <p class="mb-0">{{ product.name_ro }}</p>
+                            {% elif LANGUAGE_CODE == 'ru' %}
+                            <p class="mb-0">{{ product.name_ru }}</p>
+                            {% else %}
+                            <p class="mb-0">{{ product.name }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">MDL {{ product.price }}</p>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
                                     {% endif %}
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">MDL {{ product.price }}</p>
-                                             {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if product.available %}
-                                            <small class="text-muted">{% trans "Available" %}</small> 
-                                            {% else %}
-                                            <small class="text-danger">{% trans "Not in stock" %}</small> 
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
+                                    {% if product.available %}
+                                    <small class="text-muted">{% trans "Available" %}</small>
+                                    {% else %}
+                                    <small class="text-danger">{% trans "Not in stock" %}</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-    <div class="btt-button shadow-sm rounded-1 border">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up mx-auto my-auto"></i>
-        </a>	
-    </div>
+<div class="btt-button shadow-sm rounded-1 border">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up mx-auto my-auto"></i>
+    </a>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}
