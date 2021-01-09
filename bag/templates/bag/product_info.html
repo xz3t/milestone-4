@@ -1,2 +1,9 @@
 {% load i18n %}
-<p class="my-0"><strong>{{ item.product.name }}</strong></p>
+{% get_current_language as LANGUAGE_CODE %}
+{% if LANGUAGE_CODE == 'ro' %}
+    <p class="mb-0"><strong>{{ item.product.name_ro }}</strong></p>
+{% elif LANGUAGE_CODE == 'ru' %}
+    <p class="mb-0"><strong>{{ item.product.name_ru }}</strong></p>
+{% else %}
+    <p class="mb-0"><strong>{{ item.product.name }}</strong></p>
+{% endif %}
