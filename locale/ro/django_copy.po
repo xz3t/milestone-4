@@ -335,6 +335,10 @@ msgstr "Trimite un mesaj"
 msgid "Success! Thank you for your message."
 msgstr "Succes! Multumesc pentru mesajul tau."
 
+#: contact/views.py:39
+msgid "Send"
+msgstr "Trimite"
+
 #: coupons/forms.py:6
 msgid "Coupon"
 msgstr "Cupon"
@@ -394,6 +398,10 @@ msgstr "Înapoi în stoc:"
 #: products/templates/products/product_detail.html:104
 msgid "Add to Bag"
 msgstr "Adăugați în coș"
+
+#: products/templates/products/product_detail.html:73
+msgid "Quantity:"
+msgstr "Cantitate:"
 
 #: products/templates/products/product_detail.html:106
 msgid "N/A"

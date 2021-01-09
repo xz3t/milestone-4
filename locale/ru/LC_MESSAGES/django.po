@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 19:36+0000\n"
+"POT-Creation-Date: 2021-01-09 12:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,12 +81,12 @@ msgid "Bag Total:"
 msgstr "Товары на сумму:"
 
 #: bag/templates/bag/bag_total.html:3
-#: checkout/templates/checkout/checkout.html:66
+#: checkout/templates/checkout/checkout.html:73
 msgid "Delivery:"
 msgstr "Стоимость доставки:"
 
 #: bag/templates/bag/bag_total.html:4
-#: checkout/templates/checkout/checkout.html:65
+#: checkout/templates/checkout/checkout.html:72
 msgid "Discount:"
 msgstr "Скидка:"
 
@@ -95,7 +95,7 @@ msgid "Apply"
 msgstr "Применить"
 
 #: bag/templates/bag/bag_total.html:12
-#: checkout/templates/checkout/checkout.html:67
+#: checkout/templates/checkout/checkout.html:74
 msgid "Grand Total:"
 msgstr "Общая сумма к оплате:"
 
@@ -139,68 +139,68 @@ msgstr "Сумма заказа"
 msgid "Item"
 msgstr "Продукт"
 
-#: checkout/templates/checkout/checkout.html:64
+#: checkout/templates/checkout/checkout.html:71
 msgid "Order Total:"
 msgstr "Сумма к оплате:"
 
-#: checkout/templates/checkout/checkout.html:80
+#: checkout/templates/checkout/checkout.html:87
 msgid "Pay on delivery"
 msgstr "Оплата при получении"
 
-#: checkout/templates/checkout/checkout.html:83
+#: checkout/templates/checkout/checkout.html:90
 msgid "Pay by card"
 msgstr "Оплатить картой"
 
-#: checkout/templates/checkout/checkout.html:88
+#: checkout/templates/checkout/checkout.html:95
 msgid "Please fill out the form below to complete your order"
 msgstr "Пожалуйста, заполните форму чтобы завершить оформление заказа"
 
-#: checkout/templates/checkout/checkout.html:92
+#: checkout/templates/checkout/checkout.html:99
 msgid "Details"
 msgstr "Подробности"
 
-#: checkout/templates/checkout/checkout.html:97
+#: checkout/templates/checkout/checkout.html:104
 #: checkout/templates/checkout/checkout_success.html:179
 msgid "Delivery"
 msgstr "Доставка"
 
-#: checkout/templates/checkout/checkout.html:107
+#: checkout/templates/checkout/checkout.html:114
 msgid "Save this delivery information to my profile"
 msgstr "Сохранить данные о доставке в моем профиле"
 
-#: checkout/templates/checkout/checkout.html:111
+#: checkout/templates/checkout/checkout.html:118
 msgid "Create an account"
 msgstr "Создайте профиль"
 
-#: checkout/templates/checkout/checkout.html:111
+#: checkout/templates/checkout/checkout.html:118
 msgid " or "
 msgstr "или"
 
-#: checkout/templates/checkout/checkout.html:112
+#: checkout/templates/checkout/checkout.html:119
 msgid "login"
 msgstr "Войти"
 
-#: checkout/templates/checkout/checkout.html:112
+#: checkout/templates/checkout/checkout.html:119
 msgid " to save this information"
 msgstr "чтобы сохранить эту информацию"
 
-#: checkout/templates/checkout/checkout.html:118
+#: checkout/templates/checkout/checkout.html:125
 msgid "Payment"
 msgstr "Оплата"
 
-#: checkout/templates/checkout/checkout.html:128
+#: checkout/templates/checkout/checkout.html:135
 msgid "Your card will be charged"
 msgstr "С вашей карты будут сняты средства"
 
-#: checkout/templates/checkout/checkout.html:132
+#: checkout/templates/checkout/checkout.html:139
 msgid "Complete Order"
 msgstr "Завершить заказ"
 
-#: checkout/templates/checkout/checkout.html:140
+#: checkout/templates/checkout/checkout.html:147
 msgid "Feature coming soon..."
 msgstr "Функция скоро появится…"
 
-#: checkout/templates/checkout/checkout.html:145
+#: checkout/templates/checkout/checkout.html:152
 msgid "Adjust Bag"
 msgstr "Вернуться в корзину"
 
@@ -214,7 +214,8 @@ msgstr "Благодарим!"
 
 #: checkout/templates/checkout/checkout_success.html:22
 msgid "Your order information is below. A confirmation email will be sent to "
-msgstr "Информация о заказе указана ниже. Подтверждение будет выслано на ваш e-mail"
+msgstr ""
+"Информация о заказе указана ниже. Подтверждение будет выслано на ваш e-mail"
 
 #: checkout/templates/checkout/checkout_success.html:30
 msgid "Order Info:"
@@ -294,36 +295,52 @@ msgstr "Итого к оплате"
 msgid "Back to Profile"
 msgstr "Вернуться к профилю"
 
-#: checkout/views.py:71
+#: checkout/views.py:72
 msgid "One of the products in your bag wasn't found in our database."
 msgstr "Один из товаров из вашей Корзины не найден на складе"
 
-#: checkout/views.py:79
+#: checkout/views.py:80
 msgid ""
 "There was an error with your form.                 Please double check your "
 "information."
 msgstr ""
-"Произошла ошибка.                 Пожалуйста, проверьте правильность заполнения"
-" ."
+"Произошла ошибка.                 Пожалуйста, проверьте правильность "
+"заполнения ."
 
-#: checkout/views.py:84
+#: checkout/views.py:85
 msgid "There's nothing in your bag at the moment"
 msgstr "В данный момент Ваша корзина пуста"
 
-#: checkout/views.py:116
+#: checkout/views.py:117
 msgid ""
 "Stripe public key is missing.             Did you forget to set it in your "
 "environment?"
 msgstr ""
 
-#: checkout/views.py:159
-#, python-brace-format
+#: checkout/views.py:160
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Order successfully processed!          Your order number is "
+#| "{order_number}. A confirmation           email will be sent to {order."
+#| "email}."
 msgid ""
-"Order successfully processed!          Your order number is {order_number}. A "
-"confirmation           email will be sent to {order.email}."
+"Order successfully processed!         Your order number is {order_number}. A "
+"confirmation         email will be sent to {order.email}."
 msgstr ""
-"Заказ успешно оформлен!            Номер Вашего заказа {order_number}."
-" Подтверждение         будет выслано на Ваш e-mail {order.email}."
+"Заказ успешно оформлен!            Номер Вашего заказа {order_number}. "
+"Подтверждение         будет выслано на Ваш e-mail {order.email}."
+
+#: contact/forms.py:5
+msgid "Email "
+msgstr "Емаил "
+
+#: contact/forms.py:6
+msgid "Subject "
+msgstr "Тема "
+
+#: contact/forms.py:7
+msgid "Message "
+msgstr "Сообщение "
 
 #: contact/templates/contact/contact.html:4
 #: contact/templates/contact/contact.html:18 templates/includes/footer.html:23
@@ -334,6 +351,10 @@ msgstr "Контакты"
 #: contact/templates/contact/contact.html:31
 msgid "Send a message"
 msgstr "Отправить сообщение"
+
+#: contact/templates/contact/contact.html:39
+msgid "Send"
+msgstr "Отправить"
 
 #: contact/views.py:35
 msgid "Success! Thank you for your message."
@@ -505,8 +526,8 @@ msgid ""
 "This is a past confirmation for order number {order_number}.A confirmation "
 "email was sent on the order date."
 msgstr ""
-"Это истекшее подтверждение для заказа под номером {order_number}. Подтверждающее"
-"письмо было выслано в день оформления заказа"
+"Это истекшее подтверждение для заказа под номером {order_number}. "
+"Подтверждающееписьмо было выслано в день оформления заказа"
 
 #: templates/allauth/account/account_inactive.html:5
 #: templates/allauth/account/account_inactive.html:9
@@ -985,18 +1006,18 @@ msgstr "Войти"
 msgid "Your Bag"
 msgstr "Ваша Корзина"
 
-#: templates/includes/toasts/toast_success.html:32
+#: templates/includes/toasts/toast_success.html:39
 msgid "Qty:"
 msgstr "Количество:"
 
-#: templates/includes/toasts/toast_success.html:45
+#: templates/includes/toasts/toast_success.html:52
 msgid "Spend"
 msgstr "Потратьте еще"
 
-#: templates/includes/toasts/toast_success.html:45
+#: templates/includes/toasts/toast_success.html:52
 msgid "more to get free next day delivery!"
 msgstr "чтобы получить бесплатную доставку!"
 
-#: templates/includes/toasts/toast_success.html:49
+#: templates/includes/toasts/toast_success.html:56
 msgid "Go To Secure Checkout"
 msgstr "Перейти к оформлению заказа"

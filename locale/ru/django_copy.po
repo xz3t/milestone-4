@@ -339,6 +339,10 @@ msgstr "Отправить сообщение"
 msgid "Success! Thank you for your message."
 msgstr "Отправлено! Спасибо за Ваше сообщение."
 
+#: contact/views.py:39
+msgid "Send"
+msgstr "Отправить"
+
 #: coupons/forms.py:6
 msgid "Coupon"
 msgstr "Купон"
@@ -391,6 +395,10 @@ msgstr "Нет в наличии"
 #: products/templates/products/product_detail.html:60
 msgid "Back in stock:"
 msgstr "Снова в наличии:"
+
+#: products/templates/products/product_detail.html:73
+msgid "Quantity:"
+msgstr "Количество:"
 
 #: products/templates/products/product_detail.html:104
 msgid "Add to Bag"
