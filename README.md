@@ -18,27 +18,28 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 	* have access to the shop in one click
 	* view a list of all products and have quick access to purchase them
-	* view individual product details with description, available sizes, and stock information
+	* view individual product details with description and stock information
 	* have a view on my purchase list at any time not to overspend
-	* sort products by available/out of stock
+	* sort products by Name/Categories/Price
 	* search for a product by name or description
 	* easily selected quantity and amount of selected product when purchasing it
-	* view all the items in my shopping bag with description/qty/size/grand total
+	* view all the items in my shopping bag with name/qty/grand total
 	* easily make changes and adjustments before my purchase/order
 	* easily enter payment information to check out with no unwanted delays
 	* feel my information is secured and be confident to provide required data to make an order/purchase
-	* view confirmation after checkout and receive an email with a confirmation of the order.
+	* view confirmation after checkout and receive an email with a confirmation of the order
 
 ####  As a User, I want to :
 
     * have content in my native preffered language 
     (R.Moldova have 2 main spoken languages, Romanian and Russian)
     * have a clean interface with a familiar layout
-    * Create a personal account and be able to view and change my profile detail
+    * create a personal account and be able to view and change my profile detail
     * access and change my personal account information
     * recover a forgotten password to my account
     * have meaningful messages and confirmation of my interaction with the site 
     as confirmation emails and messages
+    * add/edit/delete a review to products
 
 
 ####  As an Admin/Store Owner, I want to :
@@ -47,8 +48,9 @@ The couple makes part of a small ecovillage project, created in the center of th
 	* add new products
 	* edit and update product description /images and availability
 	* remove products that are no longer needed 
-    * add/edit and update events
-    * add edit and update About section with new articles and links
+    * add/edit and update events and news section
+    * add/edit and update About section with new articles and links
+    * create and change promotional coupons
 
 -   ### Design
     -   #### Color Scheme
@@ -104,7 +106,8 @@ The couple makes part of a small ecovillage project, created in the center of th
 ### Known Bugs
 
 - Back to top link from products page doesnt work on some mobiles, might have a clash with hide delivery header script.
-- 
+- after testing identified following issue that is not addressed: 
+when amending order in django admin panel discount will not recalculate, solution to save discount as a % value and use it in calculations.
 
 ### Features to implement
 
