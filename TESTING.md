@@ -1,5 +1,7 @@
 ## Testing 
 
+Automated testing Contact Page https://xz3t.github.io/milestone-4/htmlcov/index.html
+
 ### User stories
 
 As a Shopper, I want to:

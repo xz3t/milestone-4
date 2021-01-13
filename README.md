@@ -61,7 +61,7 @@ The couple makes part of a small ecovillage project, created in the center of th
         -   All images are provided by recipient of the site.
 
 *   ### Wireframes
-    -   Wireframes - [View](/docs/wireframes.html)
+    -   Wireframes - [View](https://xz3t.github.io/milestone-4/docs/wireframes.html)
 
 ## Features
 
