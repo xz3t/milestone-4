@@ -76,6 +76,10 @@ msgstr ""
 msgid "No items in shopping bag."
 msgstr "Nu aveti nici un produs in cos."
 
+#: bag/templates/bag/bag.html:115
+msgid "Go to Shop"
+msgstr "Magazin"
+
 #: bag/templates/bag/bag_total.html:2
 msgid "Bag Total:"
 msgstr "Total cos:"

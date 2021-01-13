@@ -110,6 +110,10 @@
                     </div>
                 {% else %}
                 <h6>{% trans "No items in shopping bag." %}</h6>
+                <a href="{% url 'products' %}" class="btn my-btn mt-5">
+                        <i class="fas fa-chevron-left"></i>
+                    <span class="text-uppercase">{% trans "Go to Shop" %}</span>
+                </a>                
                 {% endif %}
             </div>
         </div>
