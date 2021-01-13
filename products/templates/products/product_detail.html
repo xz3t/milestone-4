@@ -95,20 +95,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn my-btn mt-5">
-                                            <i class="fas fa-chevron-left"></i>
-                                        <span class="text-uppercase">{% trans "Keep Shopping" %}</span>
-                                    </a>
-                                    {% if product.available %}
-                                    <input type="submit" class="btn my-btn text-uppercase mt-5" value="{% trans 'Add to Bag' %}">
-                                    {% else %}
-                                    <a class="btn my-btn text-uppercase text-danger mt-5" >{% trans "N/A" %}</a>
-                                    {% endif %}
+                                </div>
+                                    <div class="col-12">
+                                        <a href="{% url 'products' %}" class="btn my-btn mt-5">
+                                                <i class="fas fa-chevron-left"></i>
+                                            <span class="text-uppercase">{% trans "Keep Shopping" %}</span>
+                                        </a>
+                                        {% if product.available %}
+                                        <input type="submit" class="btn my-btn text-uppercase mt-5" value="{% trans 'Add to Bag' %}">
+                                        {% else %}
+                                        <a class="btn my-btn text-uppercase text-danger mt-5" >{% trans "N/A" %}</a>
+                                        {% endif %}
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </div>
-                            </div>   
+                            </div>
                         </form>
                 </div>
             </div>
