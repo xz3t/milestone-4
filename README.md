@@ -65,8 +65,211 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Features
 
-### Main page
-- 
+- build using bootstrap grid system, all content is adjusted to be responsive for devices down to 320px and up to 4k.
+- 3 languages available, page will load on browsers default language if not available will default to English.
+
+### Delivery Header
+- delivery header contains information about free delivery threshold and language selector
+- header hides on scroll down to preserve page real estate
+
+### Navbar
+- navbar is fixed and always remain on top of the page.
+- includes all links for an easy navigation through all content.
+- in mobile version all menu items are collapsed except "Shopping bag" to inform user of total sum of items in the bag.
+
+### Footer
+- split in 3 parts, 1st - short description with social links, 2nd - links mirroring navbar and  3rd - contact details.
+
+### Toasts messages/alerts
+- used to give users feedback when actions for ex. login, logout, add/remove or update shopping bag, checkout.
+- toasts messages top border are color coded for a better user feedback (green = success, red = error, blue = informational)
+- can be dismissed by any click outside the toast or on X in right corner.
+
+### User account
+- django allauth app implemented that take care of register/login/logout/reset password functionality
+
+### Profiles
+- My Profile store all detail and delivery information used by user.
+- user can update detail or delivery information
+- have access to all previous orders with a link to details page for the order, toast message is used to indicate to user that viewd order is an previous order.
+
+### Products page
+- search functionality allows users to search products in all 3 languages by name and description.
+- sorting option allows user to sort products by Name A-Z/Z-A, Category A-Z/Z-A and Price low to high/high to low.
+- products are represented in individual cards with image, name, price, category and availability.
+- each card links to a detailed page of the product with full information and functionality to add to basket.
+- superuser have access to edit/delete items
+
+### Product details page
+- contains full information about product Name/Price/Category/Availability/Description.
+- add to bag functionality is present with a quantity selector and add to bag button.
+- "Keep Shopping" button to return to products page.
+- each product detail has a review feature where logged in users can leave a review and edit ot remove own entries.
+- unavailable products will display a "Back to Stock" information and will not be available to be added to shopping bag
+- superuser have access to edit/delete items
+
+### Shopping bag
+- when empty will show an empty bag message and a link to products page.
+- an overview of all added products with Image/Name/Price/Qty and subtotal.
+- Quantity can be updated or product removed within the page.
+- user can add coupon to apply an discount
+- an total cost breakdown is presented to the user with information about bag total/delivery/discount
+- user can continue shopping by clicking on "Keep Shopping"
+- user can check out using "Secure Checkout" button
+
+### Coupons
+- superuser can create discount coupons with start and expiration date and desired % discount.
+- users can add coupon code, if coupon is available discount will be applied with an success message.
+- if user use expired or invalid coupon no discount wil be applied and a message to inform user will appear.
+
+### Checkout
+- users are presented with payment option and a summary of the order
+- pay on delivery disabled(will be the only option when page will be deployed to use, because of country's policy on online payments)
+- pay by card will reveal Checkout form thats contains Details and Delivery fields(delivery country reduced to 2 available).
+- Details and Delivery information can be saved if user logs in, user is given links to log in or register to save information.
+- Adjust bag button presented to user for easier navigation if any changes need to be made.
+- Payment field is connected to Stripe API payment system.
+
+
+### Payment checkout validation and success page
+- webhooks implemented with a safety net if user will refresh or leave the page, if payment succeed email will be sent and order will be saved to database.
+- user will be redirected to a success page with a order summary and a confirmation message.
+
+### Events & News
+- superuser can add/edit events via django admin for user to attend if interested and any news.
+- events are sorted from new to old by default
+
+### About
+- a short description about with Article section with links to different
+- superuser can add/edit articles via django admin
+
+
+### Contact
+- contact information and a send message contact form
+- users can send message that will be received by store owner.
+
+
+## Features to implement
+
+- events page to have a option for event reminder and location not to depend on external link for information
+- Implement Twillio API for SMS confirmation of orders
+- change buttons layuot on product details page for full translation to fit
+- email with confirmation to be sent in used language on the site.
+
+
+## Database structure
+
+profile 
+
+| _Field_             	| _Field type_    |_Attributes_					                |
+| --------------------- | --------------- |---------------------------------------------|
+|user		        	| OneToOneField   | User, on_delete=models.CASCADE		        |
+|default_full_name  	| CharField       | max_length=50, null=True, blank=True	    |
+|default_email	    	| EmailField      | max_length=254, null=True, blank=True	    |
+|default_phone_number	| CharField	      | max_length=20, null=True, blank=True	    |
+|default_country	    | CountryField    | blank_label='Country', null=True, blank=True|
+|default_postcode	    | CharField	      | max_length=20, null=True, blank=True	    |
+|default_town_or_city	| CharField	      | max_length=40, null=True, blank=True	    |
+|default_street_address1| CharField	      | max_length=80, null=True, blank=True	    |
+|default_street_address2| CharField       | max_length=80, null=True, blank=True	    |
+|default_county	    	| CharField       | max_length=80, null=True, blank=True	    |
+
+
+checkout - order
+
+| _Field_            	| _Field type_    |_Attributes_										                                    |
+| --------------------- | --------------- |-------------------------------------------------------------------------------------|
+|order_number   		| CharField	      | max_length=32, null=False, editable=False	 					                    |
+|user_profile   		| ForeignKey      | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'|
+|full_name  		    | CharField	      | max_length=50, null=False, blank=False						                        |
+|email	    		    | EmailField      | max_length=254, null=False, blank=False						                        |
+|phone_number   		| CharField       | max_length=20, null=False, blank=False						                        |
+|country	    	    | CountryField	  | blank_label='Country *', null=False, blank=False                    			    |
+|postcode	        	| CharField       | max_length=20, null=True, blank=True                                                |
+|town_or_city   		| CharField	      | max_length=40, null=False, blank=False                                              |
+|street_address1    	| CharField	      | max_length=80, null=False, blank=False                            				    |
+|street_address2    	| CharField       | max_length=80, null=True, blank=True                        					    |
+|county		    	    | CharField	      | max_length=80, null=True, blank=True                                                |
+|date	    		    | DateTimeField	  | auto_now_add=True									                                |
+|delivery_cost  		| DecimalField	  | max_digits=6, decimal_places=2, null=False, default=0				                |
+|discount	    	    | DecimalField    | max_digits=6, decimal_places=2, null=False, default=0				                |
+|order_total    		| DecimalField	  | max_digits=10, decimal_places=2, null=False, default=0                              |
+|grand_total    		| DecimalField    | max_digits=10, decimal_places=2, null=False, default=0				                |
+|original_bag   		| TextField	      | null=False, blank=False, default=''							                        |
+|stripe_pid	            | CharField	      | max_length=254, null=False, blank=False, default=''					                |
+
+
+checkout order line item
+
+
+| _Field_           	| _Field type_    |_Attributes_									                                      |
+| --------------------- | --------------- |-----------------------------------------------------------------------------------|
+|order			        | ForeignKey	  | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'|
+|product		        | ForeignKey	  | Product, null=False, blank=False, on_delete=models.CASCADE			              |
+|quantity		        | IntegerField	  | null=False, blank=False, default=0						                          |
+|lineitem_total		    | DecimalField	  | max_digits=6, decimal_places=2, null=False, blank=False, editable=False	          |
+
+
+about
+
+| _Field_         	    | _Field type_    |_Attributes_			                		|
+| --------------------- | --------------- |---------------------------------------------|
+|name			        | CharField	      | max_length=254				                |
+|description		    | TextField	      | ()						                    |
+|image 			        | ImageField	  | null=False, blank=False			            |
+|url			        | URLField	      | max_length=1024, null=True, blank=True	    |
+
+
+events
+
+
+| _Field_         	    | _Field type_    |_Attributes_					                |
+| --------------------- | --------------- |---------------------------------------------|
+|date			        | DateTimeField	  | ()						                    |	
+|name			        | CharField 	  | max_length=254				                |
+|description		    | TextField	      | ()						                    |
+|image			        | ImageField      | null=False, blank=False			            |
+|url                    | URLField	      | max_length=1024, null=True, blank=True      |
+
+coupon
+
+
+| _Field_         	    | _Field type_    |_Attributes_							                        |
+| --------------------- | --------------- |-------------------------------------------------------------|
+|code			        | CharField	      | max_length=10, unique=True					                |
+|valid_from		        | DateTimeField	  | ()								                            |
+|valid_to		        | DateTimeField	  | ()								                            |
+|discount		        | IntegerField    | validators=[MinValueValidator(0), MaxValueValidator(100)]   |
+|active 		        | BooleanField    | ()								                            |
+
+
+products
+
+| _Field_         	    | _Field type_    |_Attributes_							                        |
+| --------------------- | --------------- |-------------------------------------------------------------|
+|category		        | ForeignKey      | 'Category', null=True, blank=True, on_delete=models.SET_NULL|	
+|sku 			        | CharField	      | max_length=254, null=True, blank=True			            |
+|name			        | CharField	      | max_length=254, null=False, blank=False			            |
+|name_ro 		        | CharField       | max_length=254, null=False, blank=False			            |
+|name_ru 		        | CharField	      | max_length=254, null=False, blank=False			            |
+|description 		    | TextField	      | ()								                            |
+|description_ro 	    | TextField	      | ()								                            |
+|description_ru 	    | TextField	      | ()								                            |
+|price			        | DecimalField	  | max_digits=6, decimal_places=2				                |
+|available		        | BooleanField	  | default=True						                        |
+|back_stock		        | CharField	      | max_length=254, null=True, blank=True			            |
+|image_url		        | URLField	      | max_length=1024, null=True, blank=True			            |
+|image			        | ImageField	  | null=True, blank=True					                    |
+
+
+Review
+
+
+| _Field_         	    | _Field type_    |_Attributes_					                |
+| --------------------- | --------------- |---------------------------------------------|
+|product		        | ForeignKey	  | Product, on_delete=models.CASCADE		    |
+|user 			        | ForeignKey	  | User, on_delete=models.CASCADE		        |
+|comment		        | TextField	      | max_length=1000				                |
 
 ## Technologies Used
 
@@ -108,10 +311,9 @@ The couple makes part of a small ecovillage project, created in the center of th
 - Back to top link from products page doesnt work on some mobiles, might have a clash with hide delivery header script.
 - after testing identified following issue that is not addressed: 
 when amending order in django admin panel discount will not recalculate, solution to save discount as a % value and use it in calculations.
+- Forms not translated in templates
 
-### Features to implement
 
-- Implement Twillio API for SMS confirmation of orders
 
 ## Deployment
 
@@ -184,7 +386,7 @@ Environment variables:
 
 
 ### Links
-
+- Project was inspired and buid uppon Code Institute project Boutique Ado: https://github.com/ckz8780/boutique_ado_v1
 - review : [Link](https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
 - coupons : [Link](https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
 - hide delivery/language selection header :[Link](https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
