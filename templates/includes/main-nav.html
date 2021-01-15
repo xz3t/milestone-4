@@ -26,7 +26,7 @@
     <ul class="navbar-nav">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="user-option" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-lg-none">My Account</span><i class="fas fa-user fa-lg d-none d-lg-inline"></i>
+                <span class="d-lg-none">{% trans "My Account" %}</span><i class="fas fa-user fa-lg d-none d-lg-inline"></i>
             </a>
             <div class="dropdown-menu border-0">
                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}

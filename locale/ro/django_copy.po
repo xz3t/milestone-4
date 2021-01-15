@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 19:33+0000\n"
+"POT-Creation-Date: 2021-01-09 12:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,17 +76,21 @@ msgstr ""
 msgid "No items in shopping bag."
 msgstr "Nu aveti nici un produs in cos."
 
+#: bag/templates/bag/bag.html:115
+msgid "Go to Shop"
+msgstr "Magazin"
+
 #: bag/templates/bag/bag_total.html:2
 msgid "Bag Total:"
 msgstr "Total cos:"
 
 #: bag/templates/bag/bag_total.html:3
-#: checkout/templates/checkout/checkout.html:66
+#: checkout/templates/checkout/checkout.html:73
 msgid "Delivery:"
 msgstr "Livrare:"
 
 #: bag/templates/bag/bag_total.html:4
-#: checkout/templates/checkout/checkout.html:65
+#: checkout/templates/checkout/checkout.html:72
 msgid "Discount:"
 msgstr "Reducere:"
 
@@ -95,7 +99,7 @@ msgid "Apply"
 msgstr "Aplica"
 
 #: bag/templates/bag/bag_total.html:12
-#: checkout/templates/checkout/checkout.html:67
+#: checkout/templates/checkout/checkout.html:74
 msgid "Grand Total:"
 msgstr "Total:"
 
@@ -139,68 +143,68 @@ msgstr "Rezumat Comanda"
 msgid "Item"
 msgstr "Articol"
 
-#: checkout/templates/checkout/checkout.html:64
+#: checkout/templates/checkout/checkout.html:71
 msgid "Order Total:"
 msgstr "Total comanda:"
 
-#: checkout/templates/checkout/checkout.html:80
+#: checkout/templates/checkout/checkout.html:87
 msgid "Pay on delivery"
 msgstr "Plata la livrare"
 
-#: checkout/templates/checkout/checkout.html:83
+#: checkout/templates/checkout/checkout.html:90
 msgid "Pay by card"
 msgstr "Plata cu card"
 
-#: checkout/templates/checkout/checkout.html:88
+#: checkout/templates/checkout/checkout.html:95
 msgid "Please fill out the form below to complete your order"
 msgstr "Vă rugăm să completați formularul de mai jos pentru a finaliza comanda"
 
-#: checkout/templates/checkout/checkout.html:92
+#: checkout/templates/checkout/checkout.html:99
 msgid "Details"
 msgstr "Detalii"
 
-#: checkout/templates/checkout/checkout.html:97
+#: checkout/templates/checkout/checkout.html:104
 #: checkout/templates/checkout/checkout_success.html:179
 msgid "Delivery"
 msgstr "Livrare"
 
-#: checkout/templates/checkout/checkout.html:107
+#: checkout/templates/checkout/checkout.html:114
 msgid "Save this delivery information to my profile"
 msgstr "Salvați aceste informații de livrare în profilul meu"
 
-#: checkout/templates/checkout/checkout.html:111
+#: checkout/templates/checkout/checkout.html:118
 msgid "Create an account"
 msgstr "Creează un cont"
 
-#: checkout/templates/checkout/checkout.html:111
+#: checkout/templates/checkout/checkout.html:118
 msgid " or "
 msgstr " sau "
 
-#: checkout/templates/checkout/checkout.html:112
+#: checkout/templates/checkout/checkout.html:119
 msgid "login"
 msgstr "autentifica"
 
-#: checkout/templates/checkout/checkout.html:112
+#: checkout/templates/checkout/checkout.html:119
 msgid " to save this information"
 msgstr " pentru a salva aceste informatii"
 
-#: checkout/templates/checkout/checkout.html:118
+#: checkout/templates/checkout/checkout.html:125
 msgid "Payment"
 msgstr "Plata"
 
-#: checkout/templates/checkout/checkout.html:128
+#: checkout/templates/checkout/checkout.html:135
 msgid "Your card will be charged"
 msgstr "Cardul dvs. va fi taxat "
 
-#: checkout/templates/checkout/checkout.html:132
+#: checkout/templates/checkout/checkout.html:139
 msgid "Complete Order"
 msgstr "Finalizeaza comanda"
 
-#: checkout/templates/checkout/checkout.html:140
+#: checkout/templates/checkout/checkout.html:147
 msgid "Feature coming soon..."
 msgstr " Disponibil in curand"
 
-#: checkout/templates/checkout/checkout.html:145
+#: checkout/templates/checkout/checkout.html:152
 msgid "Adjust Bag"
 msgstr "Ajusteaza cosul"
 
@@ -214,7 +218,9 @@ msgstr " Va Mulțumim"
 
 #: checkout/templates/checkout/checkout_success.html:22
 msgid "Your order information is below. A confirmation email will be sent to "
-msgstr "Informațiile comenzii dvs. sunt mai jos. Un e-mail de confirmare va fi trimis la"
+msgstr ""
+"Informațiile comenzii dvs. sunt mai jos. Un e-mail de confirmare va fi "
+"trimis la"
 
 #: checkout/templates/checkout/checkout_success.html:30
 msgid "Order Info:"
@@ -294,32 +300,45 @@ msgstr "Total"
 msgid "Back to Profile"
 msgstr "Înapoi la profil"
 
-#: checkout/views.py:71
+#: checkout/views.py:72
 msgid "One of the products in your bag wasn't found in our database."
-msgstr "Unul dintre produsele din geantă nu a fost găsit în baza noastră de date."
+msgstr ""
+"Unul dintre produsele din geantă nu a fost găsit în baza noastră de date."
 
-#: checkout/views.py:79
+#: checkout/views.py:80
 msgid ""
 "There was an error with your form.                 Please double check your "
 "information."
 msgstr ""
 
-#: checkout/views.py:84
+#: checkout/views.py:85
 msgid "There's nothing in your bag at the moment"
 msgstr "Momentan nu e nimic în cosul tau"
 
-#: checkout/views.py:116
+#: checkout/views.py:117
 msgid ""
 "Stripe public key is missing.             Did you forget to set it in your "
 "environment?"
 msgstr ""
 
-#: checkout/views.py:159
+#: checkout/views.py:160
 #, python-brace-format
 msgid ""
 "Order successfully processed!         Your order number is {order_number}. A "
 "confirmation         email will be sent to {order.email}."
 msgstr ""
+
+#: contact/forms.py:5
+msgid "Email "
+msgstr ""
+
+#: contact/forms.py:6
+msgid "Subject "
+msgstr "Subiect "
+
+#: contact/forms.py:7
+msgid "Message "
+msgstr "Mesaj "
 
 #: contact/templates/contact/contact.html:4
 #: contact/templates/contact/contact.html:18 templates/includes/footer.html:23
@@ -331,13 +350,13 @@ msgstr "Contact"
 msgid "Send a message"
 msgstr "Trimite un mesaj"
 
+#: contact/templates/contact/contact.html:39
+msgid "Send"
+msgstr "Trimite"
+
 #: contact/views.py:35
 msgid "Success! Thank you for your message."
 msgstr "Succes! Multumesc pentru mesajul tau."
-
-#: contact/views.py:39
-msgid "Send"
-msgstr "Trimite"
 
 #: coupons/forms.py:6
 msgid "Coupon"
@@ -395,13 +414,13 @@ msgstr "Nu este în stoc"
 msgid "Back in stock:"
 msgstr "Înapoi în stoc:"
 
-#: products/templates/products/product_detail.html:104
-msgid "Add to Bag"
-msgstr "Adăugați în coș"
-
 #: products/templates/products/product_detail.html:73
 msgid "Quantity:"
 msgstr "Cantitate:"
+
+#: products/templates/products/product_detail.html:104
+msgid "Add to Bag"
+msgstr "Adăugați în coș"
 
 #: products/templates/products/product_detail.html:106
 msgid "N/A"
@@ -510,8 +529,8 @@ msgid ""
 "This is a past confirmation for order number {order_number}.A confirmation "
 "email was sent on the order date."
 msgstr ""
-"Aceasta este o confirmare anterioară pentru numărul de comandă {order_number}. O confirmare "
-"a fost trimis pe e-mail la data comenzii."
+"Aceasta este o confirmare anterioară pentru numărul de comandă "
+"{order_number}. O confirmare a fost trimis pe e-mail la data comenzii."
 
 #: templates/allauth/account/account_inactive.html:5
 #: templates/allauth/account/account_inactive.html:9
@@ -968,6 +987,10 @@ msgstr "Magazin"
 msgid "Bee products"
 msgstr "Produse apicole"
 
+#: templates/includes/main-nav.html:29
+msgid "My Account"
+msgstr "Contul meu"
+
 #: templates/includes/main-nav.html:33
 msgid "Product Management"
 msgstr ""
@@ -988,18 +1011,18 @@ msgstr "Autentificare"
 msgid "Your Bag"
 msgstr "Cosul tau"
 
-#: templates/includes/toasts/toast_success.html:32
+#: templates/includes/toasts/toast_success.html:39
 msgid "Qty:"
 msgstr ""
 
-#: templates/includes/toasts/toast_success.html:45
+#: templates/includes/toasts/toast_success.html:52
 msgid "Spend"
 msgstr "Cheltuie"
 
-#: templates/includes/toasts/toast_success.html:45
+#: templates/includes/toasts/toast_success.html:52
 msgid "more to get free next day delivery!"
 msgstr " mai mult pentru a benificia de livrare gratuita!"
 
-#: templates/includes/toasts/toast_success.html:49
+#: templates/includes/toasts/toast_success.html:56
 msgid "Go To Secure Checkout"
 msgstr "Continua"

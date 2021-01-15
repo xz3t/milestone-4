@@ -990,6 +990,10 @@ msgstr "Магазин"
 msgid "Bee products"
 msgstr "Продукты пчеловодства"
 
+#: templates/includes/main-nav.html:29
+msgid "My Account"
+msgstr "Мой аккаунт"
+
 #: templates/includes/main-nav.html:33
 msgid "Product Management"
 msgstr "Управление товарами"

@@ -987,6 +987,10 @@ msgstr "Magazin"
 msgid "Bee products"
 msgstr "Produse apicole"
 
+#: templates/includes/main-nav.html:29
+msgid "My Account"
+msgstr "Contul meu"
+
 #: templates/includes/main-nav.html:33
 msgid "Product Management"
 msgstr ""
