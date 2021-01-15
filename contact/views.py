@@ -7,12 +7,12 @@ from django.utils.translation import ugettext as _
 
 from .forms import ContactForm
 
-# Create your views here.
-
 
 def contact(request):
-    """ A view to show contact form,
-        on_profile_page used to not display shopping bag in success toast"""
+    """
+    A view to show contact form,
+    on_profile_page used to not display shopping bag in success toast
+    """
 
     if request.method == 'GET':
         form = ContactForm()

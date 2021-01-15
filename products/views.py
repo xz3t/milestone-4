@@ -7,8 +7,6 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Product, Category, Review
 
-# Create your views here.
-
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -33,7 +31,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -43,10 +40,11 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
- 
-            queries = ( Q(name__icontains=query) | Q(name_ro__icontains=query) |
+
+            queries = (Q(name__icontains=query) | Q(name_ro__icontains=query) |
             Q(name_ru__icontains=query) | Q(description__icontains=query) |
             Q(description_ro__icontains=query) | Q(description_ru__icontains=query))
             products = products.filter(queries)
@@ -193,7 +191,9 @@ def edit_review(request, product_id, review_id):
                 messages.success(request, 'Review updated!')
                 return redirect('product_detail', product_id)
             else:
-                messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+                messages.error(
+                    request,
+                    'Failed to update review. Please ensure the form is valid.')
                 return redirect('product_detail', product_id)
         else:
             form = ReviewForm(instance=review)

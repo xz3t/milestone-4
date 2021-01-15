@@ -4,7 +4,13 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 from coupons.models import Coupon
 
+
 def bag_contents(request):
+    """
+    Store bag contents in session,
+    calculate delivery treshhold with each added item,
+    If discount coupon applied calculate discounted grand total.
+    """
 
     bag_items = []
     total = 0

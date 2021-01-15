@@ -2,6 +2,25 @@
 
 Automated testing forms and views for Contact Page https://xz3t.github.io/milestone-4/htmlcov/index.html
 
+All links manually checked.
+
+## Code testing
+
+* HTML5 - https://validator.w3.org/
+ [Index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2F)
+ [Products](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fproducts%2F)
+ [Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fbag%2F)
+ [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fcheckout%2F)
+
+* CSS3 -  https://jigsaw.w3.org/css-validator/ 
+ [checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fcheckout%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+ [profile.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fprofiles%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+ [base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+* JS - all scripts validated with:  https://jshint.com/
+
+* Python - http://pep8online.com/
+
 ### User stories
 
 As a Shopper, I want to:
@@ -132,23 +151,6 @@ Responsive design adjusted to fit screens down to 320px.
 All identified issues in English version were fixed.
 
 
-## Code 
-
-* HTML5 - https://validator.w3.org/
- [Index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2F)
- [Products](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fproducts%2F)
- [Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fbag%2F)
- [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fcheckout%2F)
-
-* CSS3 -  https://jigsaw.w3.org/css-validator/ 
- [checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fcheckout%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
- [profile.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fprofiles%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
- [base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-
-* JS - all scripts validated with:  https://jshint.com/
-
-
-
 ## Bugs (fixed)
 
 In final user testing stage next bugs identified:
@@ -160,11 +162,11 @@ In further development before deploying page to use might change buttons positio
 > Discount does not appear on success page and in confirmation email.
 - identified issue: discount was not saved in order
 - solution:
-    1. created discount field in orders models,
-    2. modified update total function to extract discount,
-    3. added discount field to admin OrderAdmin,
-    4. in bag context added a session key with discount calculated from the bag
-    5. save discount from session_discount to order.discount
+ 1. created discount field in orders models,
+ 2. modified update total function to extract discount,
+ 3. added discount field to admin OrderAdmin,
+ 4. in bag context added a session key with discount calculated from the bag
+ 5. save discount from session_discount to order.discount
 
 > Order email confirmation sent from example.com
 - Missed out to add an Domain Name and Display name in Django Admin -> Home › Sites › Sites

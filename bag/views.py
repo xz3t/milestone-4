@@ -4,7 +4,6 @@ from django.contrib import messages
 
 from products.models import Product
 from coupons.forms import CouponApplyForm
-# Create your views here.
 
 
 def view_bag(request):
@@ -72,4 +71,3 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
-
