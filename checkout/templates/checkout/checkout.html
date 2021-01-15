@@ -74,10 +74,10 @@
                         <p class="my-0">{% trans 'Grand Total:' %}</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">MDL {{ total | floatformat:2 }}</p>
-                        <p class="my-0 text-danger">MDL - {{ discount | floatformat:2 }}</p>
-                        <p class="my-0">MDL {{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>MDL {{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0">{{ total | floatformat:2 }}</p>
+                        <p class="my-0 text-danger">- {{ discount | floatformat:2 }}</p>
+                        <p class="my-0">{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong>{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>

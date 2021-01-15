@@ -48,7 +48,7 @@
                                     {% include "bag/product_info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
-                                    <p class="my-0">{% trans "Price Each:" %} MDL{{ item.product.price }}</p>
+                                    <p class="my-0">{% trans "Price Each:" %} MDL {{ item.product.price }}</p>
                                     <p><strong>{% trans "Subtotal:" %} </strong>MDL {{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
