@@ -4,7 +4,7 @@
 
 The project objective is to create a full stack site around an business with e-commerce feature using Python with Django Framwork/PostgreSQL/AWS/Stripe payment methond and deploy the project to Heroku.
 
-![Preview](https://xz3t.github.io/milestone-4/docs/preview.jpg)
+![Preview](docs/preview.jpg)
 
 ## User Experience (UX)
 
