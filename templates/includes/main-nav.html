@@ -28,7 +28,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="user-option" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="d-lg-none">My Account</span><i class="fas fa-user fa-lg d-none d-lg-inline"></i>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0">
                 {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">{% trans "Product Management" %}</a> {% endif %}
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>

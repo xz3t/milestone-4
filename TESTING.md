@@ -135,8 +135,17 @@ All identified issues in English version were fixed.
 ## Code 
 
 * HTML5 - https://validator.w3.org/
-* CSS3 -  https://jigsaw.w3.org/css-validator/
-* JS - https://jshint.com/
+ [Index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2F)
+ [Products](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fproducts%2F)
+ [Bag](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fbag%2F)
+ [Checkout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fapinimd.herokuapp.com%2Fcheckout%2F)
+
+* CSS3 -  https://jigsaw.w3.org/css-validator/ 
+ [checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fcheckout%2Fstatic%2Fcheckout%2Fcss%2Fcheckout.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+ [profile.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fprofiles%2Fstatic%2Fprofiles%2Fcss%2Fprofile.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+ [base.css](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-4%2Fstatic%2Fcss%2Fbase.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+* JS - all scripts validated with:  https://jshint.com/
 
 
 
