@@ -146,6 +146,7 @@ Devices:
 - Iphone 6s (Safari)
 - Pixel 3a (Chrome)
 - Nokia 5 (Chrome)
+- Pixel 3XL (Chrome)
 
 Responsive design adjusted to fit screens down to 320px.
 All identified issues in English version were fixed.

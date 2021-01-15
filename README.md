@@ -16,49 +16,50 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 #### As a Shopper, I want to:
 
-	* have access to the shop in one click
-	* view a list of all products and have quick access to purchase them
-	* view individual product details with description and stock information
-	* have a view on my purchase list at any time not to overspend
-	* sort products by Name/Categories/Price
-	* search for a product by name or description
-	* easily selected quantity and amount of selected product when purchasing it
-	* view all the items in my shopping bag with name/qty/grand total
-	* easily make changes and adjustments before my purchase/order
-	* easily enter payment information to check out with no unwanted delays
-	* feel my information is secured and be confident to provide required data to make an order/purchase
-	* view confirmation after checkout and receive an email with a confirmation of the order
+- have access to the shop in one click
+- view a list of all products and have quick access to purchase them
+- view individual product details with description and stock information
+- have a view on my purchase list at any time not to overspend
+- sort products by Name/Categories/Price
+- search for a product by name or description
+- easily selected quantity and amount of selected product when purchasing it
+- view all the items in my shopping bag with name/qty/grand total
+- easily make changes and adjustments before my purchase/order
+- easily enter payment information to check out with no unwanted delays
+- feel my information is secured and be confident to provide required data to make an order/purchase
+- view confirmation after checkout and receive an email with a confirmation of the order
 
 ####  As a User, I want to :
 
-    * have content in my native preffered language 
+- have content in my native preffered language 
     (R.Moldova have 2 main spoken languages, Romanian and Russian)
-    * have a clean interface with a familiar layout
-    * create a personal account and be able to view and change my profile detail
-    * access and change my personal account information
-    * recover a forgotten password to my account
-    * have meaningful messages and confirmation of my interaction with the site 
+- have a clean interface with a familiar layout
+- create a personal account and be able to view and change my profile detail
+- access and change my personal account information
+- recover a forgotten password to my account
+- have meaningful messages and confirmation of my interaction with the site 
     as confirmation emails and messages
-    * add/edit/delete a review to products
+- add/edit/delete a review to products
 
 
 ####  As an Admin/Store Owner, I want to :
-    * receive a copy of order to email
-	* have easy access to manage products
-	* add new products
-	* edit and update product description /images and availability
-	* remove products that are no longer needed 
-    * add/edit and update events and news section
-    * add/edit and update About section with new articles and links
-    * create and change promotional coupons
+- receive a copy of order to email
+- have easy access to manage products
+- add new products
+- edit and update product description /images and availability
+- remove products that are no longer needed 
+- add/edit and update events and news section
+- add/edit and update About section with new articles and links
+- create and change promotional coupons
 
 -   ### Design
-    -   #### Color Scheme: Simple is better, black/white/grey colors are used.
-    -   #### Typography: Roboto Slab is used throughout the site with fall back to Serif.
-    -   #### Imagery: All images are provided by business owners and own the images.
+“The simplest solution is almost always the best.”
+-  Color Scheme: black/white/grey colors are used.
+-   Typography: Roboto Slab is used throughout the site with fall back to Serif.
+-   Imagery: All images are provided by business owner and have ownership over them.
 
-*   ### Wireframes
-    -   Wireframes - [View](https://xz3t.github.io/milestone-4/docs/wireframes.html)
+### Wireframes
+-   Wireframes - [View](https://xz3t.github.io/milestone-4/docs/wireframes.html)
 
 ## Features
 
@@ -72,8 +73,8 @@ The couple makes part of a small ecovillage project, created in the center of th
 - all static files and media are stored with AWS in S3 bucket.
 
 ### Delivery Header
-- delivery header contains information about free delivery threshold and language selector
-- header hides on scroll down to preserve page real estate
+- delivery header contains information about free delivery threshold and language selector.
+- header hides on scroll down to preserve page real estate.
 
 ### Navbar
 - navbar is fixed and always remain on top of the page.
@@ -85,11 +86,11 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ### Toasts messages/alerts
 - used to give users feedback when actions for ex. login, logout, add/remove or update shopping bag, checkout.
-- toasts messages top border are color coded for a better user feedback (green = success, red = error, blue = informational)
+- toasts messages top border are color coded for a better user feedback (green = success, red = error, blue = informational).
 - can be dismissed by any click outside the toast or on X in right corner.
 
 ### User account
-- django allauth app implemented that take care of register/login/logout/reset password functionality
+- django allauth app implemented that take care of register/login/logout/reset password functionality.
 
 ### Profiles
 - My Profile store all detail and delivery information used by user.
@@ -101,24 +102,24 @@ The couple makes part of a small ecovillage project, created in the center of th
 - sorting option allows user to sort products by Name A-Z/Z-A, Category A-Z/Z-A and Price low to high/high to low.
 - products are represented in individual cards with image, name, price, category and availability.
 - each card links to a detailed page of the product with full information and functionality to add to basket.
-- superuser have access to edit/delete items
+- superuser have access to edit/delete items.
 
 ### Product details page
 - contains full information about product Name/Price/Category/Availability/Description.
 - add to bag functionality is present with a quantity selector and add to bag button.
 - "Keep Shopping" button to return to products page.
 - each product detail has a review feature where logged in users can leave a review and edit ot remove own entries.
-- unavailable products will display a "Back to Stock" information and will not be available to be added to shopping bag
-- superuser have access to edit/delete items
+- unavailable products will display a "Back to Stock" information and will not be available to be added to shopping bag.
+- superuser have access to edit/delete items.
 
 ### Shopping bag
 - when empty will show an empty bag message and a link to products page.
 - an overview of all added products with Image/Name/Price/Qty and subtotal.
 - Quantity can be updated or product removed within the page.
-- user can add coupon to apply an discount
-- an total cost breakdown is presented to the user with information about bag total/delivery/discount
-- user can continue shopping by clicking on "Keep Shopping"
-- user can check out using "Secure Checkout" button
+- user can add coupon to apply an discount.
+- an total cost breakdown is presented to the user with information about bag total/delivery/discount.
+- user can continue shopping by clicking on "Keep Shopping".
+- user can check out using "Secure Checkout" button.
 
 ### Coupons
 - superuser can create discount coupons with start and expiration date and desired % discount.
@@ -126,8 +127,8 @@ The couple makes part of a small ecovillage project, created in the center of th
 - if user use expired or invalid coupon no discount wil be applied and a message to inform user will appear.
 
 ### Checkout
-- users are presented with payment option and a summary of the order
-- pay on delivery disabled(will be the only option when page will be deployed to use, because of country's policy on online payments)
+- users are presented with payment option and a summary of the order.
+- pay on delivery disabled(will be the only option when page will be deployed to use, because of country's policy on online payments).
 - pay by card will reveal Checkout form thats contains Details and Delivery fields(delivery country reduced to 2 available).
 - Details and Delivery information can be saved if user logs in, user is given links to log in or register to save information.
 - Adjust bag button presented to user for easier navigation if any changes need to be made.
@@ -140,23 +141,23 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ### Events & News
 - superuser can add/edit events via django admin for user to attend if interested and any news.
-- events are sorted from new to old by default
+- events are sorted from new to old by default.
 
 ### About
-- a short description about with Article section with links to different
-- superuser can add/edit articles via django admin
+- a short description about with Article section with links to different.
+- superuser can add/edit articles via django admin.
 
 
 ### Contact
-- contact information and a send message contact form
+- contact information and a send message contact form.
 - users can send message that will be received by store owner.
 
 
 ## Features to implement
 
-- events page to have a option for event reminder and location not to depend on external link for information
-- Implement Twillio API for SMS confirmation of orders
-- change buttons layuot on product details page for full translation to fit
+- events page to have a option for event reminder and location not to depend on external link for information.
+- Implement Twillio API for SMS confirmation of orders.
+- change buttons layuot on product details page for full translation to fit.
 - email with confirmation to be sent in used language on the site.
 
 
@@ -275,10 +276,10 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Technologies Used
 
-    - [HTML5](https://en.wikipedia.org/wiki/HTML5)
-    - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-    - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-    - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Frameworks, Libraries & Programs Used
 
@@ -313,7 +314,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 - Back to top link from products page doesnt work on some mobiles, might have a clash with hide delivery header script.
 - after testing identified following issue that is not addressed: 
 when amending order in django admin panel discount will not recalculate, solution to save discount as a % value and use it in calculations.
-- Forms not translated in templates
+- Forms not translated in templates and confirmation email.
 
 
 ## Deployment
@@ -377,7 +378,7 @@ Environment variables:
     
 ### Media
 
--   All pictures are provided by business owners and own them.
+-   All pictures are provided by business owner and have ownership over them.
 
 
 ### Acknowledgements
@@ -387,7 +388,7 @@ Environment variables:
 
 ### Links
 
-- Project was inspired and buid uppon Code Institute project Boutique Ado: https://github.com/ckz8780/boutique_ado_v1
+- Project was inspired and buit uppon Code Institute project Boutique Ado: [Link](https://github.com/ckz8780/boutique_ado_v1)
 - Review example: [Link](https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
 - Coupons example: [Link](https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
 - Hide delivery/language selection header :[Link](https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
