@@ -1,6 +1,6 @@
 ## Testing 
 
-Automated testing Contact Page https://xz3t.github.io/milestone-4/htmlcov/index.html
+Automated testing forms and views for Contact Page https://xz3t.github.io/milestone-4/htmlcov/index.html
 
 ### User stories
 
@@ -126,7 +126,7 @@ Devices:
 - Iphone 5s (Safari)
 - Iphone 6s (Safari)
 - Pixel 3a (Chrome)
-- Nokia 5
+- Nokia 5 (Chrome)
 
 Responsive design adjusted to fit screens down to 320px.
 All identified issues in English version were fixed.
