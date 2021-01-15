@@ -168,7 +168,7 @@
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
                 $("#on-delivery").click(function(){
                     $(".order-pay-delivery").show();
