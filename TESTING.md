@@ -21,7 +21,7 @@ All links manually checked.
 
 * Python - http://pep8online.com/
 
-### User stories
+## User stories testing
 
 As a Shopper, I want to:
 
