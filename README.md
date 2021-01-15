@@ -53,12 +53,9 @@ The couple makes part of a small ecovillage project, created in the center of th
     * create and change promotional coupons
 
 -   ### Design
-    -   #### Color Scheme
-        -   Simple is better, black/white/grey colors are used.
-    -   #### Typography
-        -   Roboto Slab is used throughout the site with fall back to Serif.
-    -   #### Imagery
-        -   All images are provided by recipient of the site.
+    -   #### Color Scheme: Simple is better, black/white/grey colors are used.
+    -   #### Typography: Roboto Slab is used throughout the site with fall back to Serif.
+    -   #### Imagery: All images are provided by business owners and own the images.
 
 *   ### Wireframes
     -   Wireframes - [View](https://xz3t.github.io/milestone-4/docs/wireframes.html)
@@ -72,7 +69,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 - Heroku  used to store information.
 
 ### AWS
-- all static files and media is stored on AWS in S3 bucket.
+- all static files and media are stored with AWS in S3 bucket.
 
 ### Delivery Header
 - delivery header contains information about free delivery threshold and language selector
@@ -165,7 +162,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Database structure
 
-Profile model used to store user information.
+> Profile model used to store user information.
 
 | _Field_             	| _Field type_    |_Attributes_					                |
 | --------------------- | --------------- |---------------------------------------------|
@@ -181,7 +178,7 @@ Profile model used to store user information.
 |default_county	    	| CharField       | max_length=80, null=True, blank=True	    |
 
 
-Checkout - Order model used to store order information.
+> Checkout - Order model used to store order information.
 
 | _Field_            	| _Field type_    |_Attributes_										                                    |
 | --------------------- | --------------- |-------------------------------------------------------------------------------------|
@@ -205,7 +202,7 @@ Checkout - Order model used to store order information.
 |stripe_pid	            | CharField	      | max_length=254, null=False, blank=False, default=''					                |
 
 
-Checkout order line item used to store and add items to order model.
+> Checkout order line item used to store and add items to order model.
 
 | _Field_           	| _Field type_    |_Attributes_									                                      |
 | --------------------- | --------------- |-----------------------------------------------------------------------------------|
@@ -215,7 +212,7 @@ Checkout order line item used to store and add items to order model.
 |lineitem_total		    | DecimalField	  | max_digits=6, decimal_places=2, null=False, blank=False, editable=False	          |
 
 
-About model used to store links to external articles about business.
+> About model used to store links to external articles about business.
 
 | _Field_         	    | _Field type_    |_Attributes_			                		|
 | --------------------- | --------------- |---------------------------------------------|
@@ -225,7 +222,7 @@ About model used to store links to external articles about business.
 |url			        | URLField	      | max_length=1024, null=True, blank=True	    |
 
 
-Events model used to store past and future events attended by business.
+> Events model used to store past and future events attended by business.
 
 | _Field_         	    | _Field type_    |_Attributes_					                |
 | --------------------- | --------------- |---------------------------------------------|
@@ -236,7 +233,7 @@ Events model used to store past and future events attended by business.
 |url                    | URLField	      | max_length=1024, null=True, blank=True      |
 
 
-Coupon model used to store discount coupons.
+> Coupon model used to store discount coupons.
 
 | _Field_         	    | _Field type_    |_Attributes_							                        |
 | --------------------- | --------------- |-------------------------------------------------------------|
@@ -247,7 +244,7 @@ Coupon model used to store discount coupons.
 |active 		        | BooleanField    | ()								                            |
 
 
-Products model used to store all information related products in 3 languages.
+> Products model used to store all information related products in 3 languages.
 
 | _Field_         	    | _Field type_    |_Attributes_							                        |
 | --------------------- | --------------- |-------------------------------------------------------------|
@@ -266,7 +263,7 @@ Products model used to store all information related products in 3 languages.
 |image			        | ImageField	  | null=True, blank=True					                    |
 
 
-Review model used to store reviews for each product.
+> Review model used to store reviews for each product.
 
 
 | _Field_         	    | _Field type_    |_Attributes_					                |
@@ -326,7 +323,7 @@ when amending order in django admin panel discount will not recalculate, solutio
 Requirements: 
 1. Installed Python on your environment 
 2. An AWS account with S3 bucket setup
-3. As Stripe account
+3. An Stripe account
 
 Environment variables:
 
@@ -380,7 +377,7 @@ Environment variables:
     
 ### Media
 
--   All pictures are provided by business owners and have copyright on them.
+-   All pictures are provided by business owners and own them.
 
 
 ### Acknowledgements
