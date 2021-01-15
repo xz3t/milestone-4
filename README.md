@@ -68,6 +68,12 @@ The couple makes part of a small ecovillage project, created in the center of th
 - build using bootstrap grid system, all content is adjusted to be responsive for devices down to 320px and up to 4k.
 - 3 languages available, page will load on browsers default language if not available will default to English.
 
+### Database
+- Heroku  used to store information.
+
+### AWS
+- all static files and media is stored on AWS in S3 bucket.
+
 ### Delivery Header
 - delivery header contains information about free delivery threshold and language selector
 - header hides on scroll down to preserve page real estate
@@ -159,7 +165,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 
 ## Database structure
 
-profile 
+Profile model used to store user information.
 
 | _Field_             	| _Field type_    |_Attributes_					                |
 | --------------------- | --------------- |---------------------------------------------|
@@ -175,7 +181,7 @@ profile
 |default_county	    	| CharField       | max_length=80, null=True, blank=True	    |
 
 
-checkout - order
+Checkout - Order model used to store order information.
 
 | _Field_            	| _Field type_    |_Attributes_										                                    |
 | --------------------- | --------------- |-------------------------------------------------------------------------------------|
@@ -199,8 +205,7 @@ checkout - order
 |stripe_pid	            | CharField	      | max_length=254, null=False, blank=False, default=''					                |
 
 
-checkout order line item
-
+Checkout order line item used to store and add items to order model.
 
 | _Field_           	| _Field type_    |_Attributes_									                                      |
 | --------------------- | --------------- |-----------------------------------------------------------------------------------|
@@ -210,7 +215,7 @@ checkout order line item
 |lineitem_total		    | DecimalField	  | max_digits=6, decimal_places=2, null=False, blank=False, editable=False	          |
 
 
-about
+About model used to store links to external articles about business.
 
 | _Field_         	    | _Field type_    |_Attributes_			                		|
 | --------------------- | --------------- |---------------------------------------------|
@@ -220,8 +225,7 @@ about
 |url			        | URLField	      | max_length=1024, null=True, blank=True	    |
 
 
-events
-
+Events model used to store past and future events attended by business.
 
 | _Field_         	    | _Field type_    |_Attributes_					                |
 | --------------------- | --------------- |---------------------------------------------|
@@ -231,8 +235,8 @@ events
 |image			        | ImageField      | null=False, blank=False			            |
 |url                    | URLField	      | max_length=1024, null=True, blank=True      |
 
-coupon
 
+Coupon model used to store discount coupons.
 
 | _Field_         	    | _Field type_    |_Attributes_							                        |
 | --------------------- | --------------- |-------------------------------------------------------------|
@@ -243,7 +247,7 @@ coupon
 |active 		        | BooleanField    | ()								                            |
 
 
-products
+Products model used to store all information related products in 3 languages.
 
 | _Field_         	    | _Field type_    |_Attributes_							                        |
 | --------------------- | --------------- |-------------------------------------------------------------|
@@ -262,7 +266,7 @@ products
 |image			        | ImageField	  | null=True, blank=True					                    |
 
 
-Review
+Review model used to store reviews for each product.
 
 
 | _Field_         	    | _Field type_    |_Attributes_					                |
@@ -270,6 +274,7 @@ Review
 |product		        | ForeignKey	  | Product, on_delete=models.CASCADE		    |
 |user 			        | ForeignKey	  | User, on_delete=models.CASCADE		        |
 |comment		        | TextField	      | max_length=1000				                |
+
 
 ## Technologies Used
 
@@ -303,7 +308,7 @@ Review
 
 ## Testing
 
-[Testing](https://github.com/xz3t/milestone-4/blob/master/TESTING.md)
+[Go to Testing section](https://github.com/xz3t/milestone-4/blob/master/TESTING.md)
 
 
 ### Known Bugs
@@ -312,7 +317,6 @@ Review
 - after testing identified following issue that is not addressed: 
 when amending order in django admin panel discount will not recalculate, solution to save discount as a % value and use it in calculations.
 - Forms not translated in templates
-
 
 
 ## Deployment
@@ -373,11 +377,10 @@ Environment variables:
 8. Navigate back Deploy section, click on the Deploy Branch, you can enable Automatic Deploy, in automatic mode every push to GitHub wil automatically the latest version.
 9. Now app is deployed on Heroku, you can open and view it by clicking on the Open app on top of the page.
 
-
     
 ### Media
 
--   All pictures are provided by recipent of the project and have copyright on them.
+-   All pictures are provided by business owners and have copyright on them.
 
 
 ### Acknowledgements
@@ -386,8 +389,9 @@ Environment variables:
 
 
 ### Links
+
 - Project was inspired and buid uppon Code Institute project Boutique Ado: https://github.com/ckz8780/boutique_ado_v1
-- review : [Link](https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
-- coupons : [Link](https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
-- hide delivery/language selection header :[Link](https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
-- close div on click outside : [Link](https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside)
+- Review example: [Link](https://www.youtube.com/watch?v=IVyc06bASSg&list=PLeyK9Dw9ShReHUdt5Nh2qlgF6keN6DI7z&index=31&ab_channel=Onthir)
+- Coupons example: [Link](https://www.youtube.com/watch?v=_dSCGMJcoe4&ab_channel=PacktVideo)
+- Hide delivery/language selection header :[Link](https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up)
+- Close toast div by click anywhere outside : [Link](https://stackoverflow.com/questions/17965839/close-a-div-by-clicking-outside)
