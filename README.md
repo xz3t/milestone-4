@@ -125,6 +125,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 - superuser can create discount coupons with start and expiration date and desired % discount.
 - users can add coupon code, if coupon is available discount will be applied with an success message.
 - if user use expired or invalid coupon no discount wil be applied and a message to inform user will appear.
+- "CODE10" test coupon set up with 10% discount.
 
 ### Checkout
 - users are presented with payment option and a summary of the order.
@@ -159,6 +160,7 @@ The couple makes part of a small ecovillage project, created in the center of th
 - Implement Twillio API for SMS confirmation of orders.
 - change buttons layuot on product details page for full translation to fit.
 - email with confirmation to be sent in used language on the site.
+- implement social account to log in with facebook.
 
 
 ## Database structure

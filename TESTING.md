@@ -2,7 +2,7 @@
 
 Automated testing forms and views for Contact Page https://xz3t.github.io/milestone-4/htmlcov/index.html
 
-All links manually checked.
+All links and functionality manually tested by myself/friends and work colleagues.
 
 ## Code testing
 
